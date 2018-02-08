@@ -1,0 +1,6 @@
+﻿//The phase of the moon
+// closest too
+Mutuwhenua - New moon (0)
+Tamatea-ā-āiō - First quarter moon(7)
+Rākaunui - Full moon (14)
+Tangaroa-ā-roto  - Last Quater moon (21)

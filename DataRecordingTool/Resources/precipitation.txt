@@ -1,0 +1,12 @@
+//The amound of overnight precipitation
+None (0)
+Mist (1)
+Drizzle (2)
+Fog (3)
+Intermittent light rain (4)
+Light rain (5)
+Intermittent moderate rain (6)
+Moderate rain (7)
+Intermittent heavy rain (8)
+Heavy rain - "I can't believe I put the trap out" - BJA (9)
+Unsure (-1)

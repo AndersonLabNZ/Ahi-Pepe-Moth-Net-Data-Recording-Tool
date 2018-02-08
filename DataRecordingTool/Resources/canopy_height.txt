@@ -1,0 +1,13 @@
+//The height of the canopy
+Bare ground (0)
+Approx. ankle height - <5cm (0.05)
+Approx. knee height - <40cm (0.4)
+Approx. tussock height - <80cm (0.8)
+Approx. wheelie bin - <1m (1)
+Approx. flax - <1.5m (1.5)
+Approx. campervan height - <2m (2)
+Approx. height of a London double decker bus - <4m (4)
+Approx. house height - <8m (8)
+Approx. road street-light height - <12m (12)
+Approx. mature cabbage tree height - <20m (20)
+Approx. mature kahikatea height <50m (50)

@@ -1,0 +1,9 @@
+C,Aoraia aurimaculata
+S,Aoraia dinodes
+W,Aoraia enysii
+S,Aoraia rufivena
+CSW,Cladoxycanus minos
+S,Heloxycanus patricki
+CSWE,Wiseana copularis
+E,Wiseana signata
+CSWE,Wiseana umbraculata

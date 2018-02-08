@@ -1,0 +1,7 @@
+//The subregions for Te Tahiwi
+Marlborough Sounds (SD)
+Marlborough (MB)
+Kaikoura (KA)
+North Canterbury (NC)
+Mid Canterbury (MC)
+South Canterbury (SC)

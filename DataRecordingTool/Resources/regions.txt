@@ -1,0 +1,5 @@
+//The list of regions in the South Island
+Te Rauawa (E)
+Te Tahiwi (W)
+Te Hiheru (C)
+Te Taurapa (S)

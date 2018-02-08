@@ -1,0 +1,5 @@
+//The subregions for Te Taurapa
+Dunedin (DN)
+Fiordland (FD)
+Southland (SL)
+Stewart Island (SI)

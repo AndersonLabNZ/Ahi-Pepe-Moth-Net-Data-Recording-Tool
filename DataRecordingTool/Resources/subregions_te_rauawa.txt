@@ -1,0 +1,4 @@
+//The subregions for Te Rauawa
+Nelson (NN)
+Buller (BR)
+Westland (WD)
