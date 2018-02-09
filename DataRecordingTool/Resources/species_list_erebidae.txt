@@ -1,2 +1,5 @@
-SWE,Rhapsa scotosialis 
-SWE,Schrankia costaestrigalis 
+A,Dasypodia cymatodes
+A,Pantydia sparsa
+BCD,Trigonistis anticlina
+ABCDEFH,Rhapsa scotosialis 
+ABDEFH,Schrankia costaestrigalis 

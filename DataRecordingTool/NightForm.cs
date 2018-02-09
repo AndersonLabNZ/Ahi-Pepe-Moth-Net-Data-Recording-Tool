@@ -201,15 +201,17 @@ namespace MothNet
             if (MessageBox.Show("Do you want to export the data?", "Export Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //Create a save file dialog. only allow zip files
-                SaveFileDialog dialog = new SaveFileDialog();
-                dialog.AddExtension = true;
-                dialog.AutoUpgradeEnabled = true;
-                dialog.DefaultExt = ".zip";
-                dialog.Filter = "Zipped Archive (*.zip) | *.zip";
-                dialog.OverwritePrompt = true;
-                dialog.SupportMultiDottedExtensions = false;
-                dialog.Title = "Chose export location";
-                dialog.ValidateNames = true;
+                SaveFileDialog dialog = new SaveFileDialog
+                {
+                    AddExtension = true,
+                    AutoUpgradeEnabled = true,
+                    DefaultExt = ".zip",
+                    Filter = "Zipped Archive (*.zip) | *.zip",
+                    OverwritePrompt = true,
+                    SupportMultiDottedExtensions = false,
+                    Title = "Chose export location",
+                    ValidateNames = true
+                };
 
                 //Return if they cancel
                 if (dialog.ShowDialog() != DialogResult.OK)
@@ -220,31 +222,40 @@ namespace MothNet
                 //Create a temportay directory, by (if required, deleting), and creating it
                 string tempDir = Path.Combine(HelperFunctions.ParentDir, "temp");
 
-                try
-                {
-                    Directory.Delete(tempDir, true);
-                }
-                catch (DirectoryNotFoundException) { }
+                
 
                 Directory.CreateDirectory(tempDir);
 
-                //Copy all required data, starting with the site data. Ignoring the site name file, it is not needed
-                File.Copy(EditSite.DataFileName, Path.Combine(tempDir, EditSite.textBoxSiteName.Text + ".txt"));
-
-                //Now copy all the night data
-                foreach (NightEdit edit in listBoxNights.Items)
+                try
                 {
-                    File.Copy(edit.DataFileName, Path.Combine(tempDir, edit.textBoxSiteNight.Text + ".txt"));
-                    if (edit.EnvironmentalDataForm.checkBoxIbuttonFileAvailable.Checked)
+                    //Copy all required data, starting with the site data. Ignoring the site name file, it is not needed
+                    File.Copy(EditSite.DataFileName, Path.Combine(tempDir, EditSite.textBoxSiteName.Text + ".txt"));
+
+                    //Now copy all the night data
+                    foreach (GuidItem item in listBoxNights.Items)
                     {
-                        File.Copy(edit.EnvironmentalDataForm.IButtonFile.FileDir, Path.Combine(tempDir, edit.textBoxSiteNight.Text + "_ibutton.txt"));
+                        string parentPath = Path.Combine(HelperFunctions.SitesDir, EditSite.FileGuid.ToString(), "nights", item.ToString());
+                        string idName = HelperFunctions.LoadName(parentPath, "night_name.txt");
+                        File.Copy(Path.Combine(parentPath, "site_data.txt"), Path.Combine(tempDir, idName + ".txt"));
+
+                        File.Copy(Path.Combine(parentPath, "ibutton_data.txt"), Path.Combine(tempDir, idName + "_ibutton.txt"));
+                        File.Copy(Path.Combine(parentPath, "kestrel_data.txt"), Path.Combine(tempDir, idName + "_kestrel.txt"));
+
+                        File.Copy(Path.Combine(parentPath, "moth_abundances.txt"), Path.Combine(tempDir, idName + "_inds.txt"));
+                        File.Copy(Path.Combine(parentPath, "rodent_abundances.txt"), Path.Combine(tempDir, idName + "_inds_rodents.txt"));
                     }
-                    if (edit.EnvironmentalDataForm.checkBoxKestFileAvailable.Checked)
+                }
+                catch (FileNotFoundException except)
+                {
+                    MessageBox.Show("Could not copy data - " + except.Message, "Unable to Export Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    try
                     {
-                        File.Copy(edit.EnvironmentalDataForm.KestrelFile.FileDir, Path.Combine(tempDir, edit.textBoxSiteNight.Text + "_kestral.txt"));
+                        Directory.Delete(tempDir, true);
                     }
-                    File.Copy(edit.InputDataForm.Moths.FileDirectory, Path.Combine(tempDir, edit.textBoxSiteNight.Text + "_inds.txt"));
-                    File.Copy(edit.InputDataForm.Rodents.FileDirectory, Path.Combine(tempDir, edit.textBoxSiteNight.Text + "_inds_rodents.txt"));
+                    catch (DirectoryNotFoundException) { }
+
+                    return;
                 }
 
                 //Make sure no file already exists

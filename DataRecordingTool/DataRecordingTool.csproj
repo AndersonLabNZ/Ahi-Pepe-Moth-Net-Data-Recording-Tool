@@ -7,7 +7,7 @@
     <ProjectGuid>{B2C712FF-3B57-44A4-BD80-67B3216BC383}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataRecordingTool</RootNamespace>
+    <RootNamespace>MothNet</RootNamespace>
     <AssemblyName>DataRecordingTool</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -88,6 +88,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,14 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="StartForm.aa.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,9 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\regions.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\subregions_te_hiheru.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\subregions_te_rauawa.txt" />
@@ -221,6 +218,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ahi_Pepe.ico" />
+    <None Include="Resources\species_list_nolidae.txt" />
+    <None Include="Resources\species_list_saturniidae.txt" />
+    <None Include="Resources\species_list_sphingidae.txt" />
+    <None Include="Resources\subregions_ngā_paihau.txt" />
+    <None Include="Resources\subregions_te tuakoko.txt" />
+    <None Include="Resources\subregions_te_hiku.txt" />
+    <None Include="Resources\subregions_te_hīheru.txt" />
+    <None Include="Resources\subregions_te_ihu.txt" />
     <None Include="Resources\species_list_rodents.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

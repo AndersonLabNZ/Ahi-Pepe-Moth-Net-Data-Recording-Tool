@@ -64,11 +64,18 @@ namespace MothNet
                     string[] geometridae = HelperFunctions.GetResourceList("species_list_geometridae");
                     string[] hepialidae = HelperFunctions.GetResourceList("species_list_hepialidae");
                     string[] noctuidae = HelperFunctions.GetResourceList("species_list_noctuidae");
+                    string[] saturniidae = HelperFunctions.GetResourceList("species_list_saturniidae");
+                    string[] sphingidae = HelperFunctions.GetResourceList("species_list_sphingidae");
+                    string[] nolidae = HelperFunctions.GetResourceList("species_list_nolidae");
                     List<String> list = new List<String>();
                     list.AddRange(erebidae);
                     list.AddRange(geometridae);
                     list.AddRange(hepialidae);
                     list.AddRange(noctuidae);
+                    list.AddRange(saturniidae);
+                    list.AddRange(sphingidae);
+                    list.AddRange(nolidae);
+
                     foreach (string item in list)
                     {
                         string[] split = item.Split(',');

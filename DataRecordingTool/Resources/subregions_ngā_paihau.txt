@@ -1,0 +1,6 @@
+//The subregions for Ngā Paihau
+Waikato (WO)
+Bay of Plenty (BP)
+Gisborne (GB)
+Taupo (TO)
+Taranaki (TK)

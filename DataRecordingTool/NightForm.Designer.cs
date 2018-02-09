@@ -51,14 +51,14 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.buttonEdit, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonAdd, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonRemove, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonEdit, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonAdd, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonRemove, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.listBoxNights, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonOk, 4, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -74,33 +74,33 @@
             // buttonEdit
             // 
             this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEdit.Location = new System.Drawing.Point(203, 315);
+            this.buttonEdit.Location = new System.Drawing.Point(123, 315);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(109, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(144, 23);
             this.buttonEdit.TabIndex = 3;
-            this.buttonEdit.Text = "Edit...";
+            this.buttonEdit.Text = "Edit Selected Night...";
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.EditButtonClick);
             // 
             // buttonAdd
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAdd.Location = new System.Drawing.Point(103, 315);
+            this.buttonAdd.Location = new System.Drawing.Point(3, 315);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(94, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(114, 23);
             this.buttonAdd.TabIndex = 2;
-            this.buttonAdd.Text = "Add...";
+            this.buttonAdd.Text = "Add New Night...";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.AddButtonClick);
             // 
             // buttonRemove
             // 
             this.buttonRemove.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRemove.Location = new System.Drawing.Point(3, 315);
+            this.buttonRemove.Location = new System.Drawing.Point(273, 315);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(94, 23);
+            this.buttonRemove.Size = new System.Drawing.Size(144, 23);
             this.buttonRemove.TabIndex = 1;
-            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.Text = "Remove Selected Night";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.RemoveButtonClick);
             // 
@@ -111,7 +111,7 @@
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(94, 23);
             this.buttonOk.TabIndex = 4;
-            this.buttonOk.Text = "Save";
+            this.buttonOk.Text = "Save and Close";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.SaveButtonClick);
             // 

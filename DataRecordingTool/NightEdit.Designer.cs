@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NightEdit));
             this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonSpecies = new System.Windows.Forms.Button();
             this.tableLayoutPanelHhMmSunset = new System.Windows.Forms.TableLayoutPanel();
             this.numericUpDownMmSunrise = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownHhSunrise = new System.Windows.Forms.NumericUpDown();
+            this.buttonEnvironment = new System.Windows.Forms.Button();
             this.labelPpt = new System.Windows.Forms.Label();
             this.labelCloud = new System.Windows.Forms.Label();
             this.labelDistanceLight = new System.Windows.Forms.Label();
@@ -49,14 +49,15 @@
             this.labelSiteName = new System.Windows.Forms.Label();
             this.textBoxSiteName = new System.Windows.Forms.TextBox();
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
-            this.buttonSave = new System.Windows.Forms.Button();
             this.comboBoxMoonPhase = new System.Windows.Forms.ComboBox();
             this.textBoxDistanceToLightSource = new System.Windows.Forms.TextBox();
-            this.buttonEnvironment = new System.Windows.Forms.Button();
             this.tableLayoutPanelHmMmSunrise = new System.Windows.Forms.TableLayoutPanel();
             this.numericUpDownMmSunset = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownHhSunset = new System.Windows.Forms.NumericUpDown();
             this.checkedListBoxAltLight = new System.Windows.Forms.CheckedListBox();
+            this.tableLayoutPanelButtons = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonSpecies = new System.Windows.Forms.Button();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelHhMmSunset.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMmSunrise)).BeginInit();
@@ -64,6 +65,7 @@
             this.tableLayoutPanelHmMmSunrise.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMmSunset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHhSunset)).BeginInit();
+            this.tableLayoutPanelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelMain
@@ -71,8 +73,8 @@
             this.tableLayoutPanelMain.ColumnCount = 2;
             this.tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelMain.Controls.Add(this.buttonSpecies, 0, 11);
             this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelHhMmSunset, 1, 4);
+            this.tableLayoutPanelMain.Controls.Add(this.buttonEnvironment, 0, 10);
             this.tableLayoutPanelMain.Controls.Add(this.labelPpt, 0, 9);
             this.tableLayoutPanelMain.Controls.Add(this.labelCloud, 0, 8);
             this.tableLayoutPanelMain.Controls.Add(this.labelDistanceLight, 0, 7);
@@ -88,17 +90,16 @@
             this.tableLayoutPanelMain.Controls.Add(this.labelSiteName, 0, 0);
             this.tableLayoutPanelMain.Controls.Add(this.textBoxSiteName, 1, 0);
             this.tableLayoutPanelMain.Controls.Add(this.dateTimePickerDate, 1, 1);
-            this.tableLayoutPanelMain.Controls.Add(this.buttonSave, 0, 12);
             this.tableLayoutPanelMain.Controls.Add(this.comboBoxMoonPhase, 1, 5);
             this.tableLayoutPanelMain.Controls.Add(this.textBoxDistanceToLightSource, 1, 7);
-            this.tableLayoutPanelMain.Controls.Add(this.buttonEnvironment, 0, 10);
             this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelHmMmSunrise, 1, 3);
             this.tableLayoutPanelMain.Controls.Add(this.checkedListBoxAltLight, 1, 6);
+            this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelButtons, 1, 11);
             this.tableLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanelMain.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
-            this.tableLayoutPanelMain.RowCount = 14;
+            this.tableLayoutPanelMain.RowCount = 12;
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
@@ -110,23 +111,10 @@
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanelMain.Size = new System.Drawing.Size(442, 455);
             this.tableLayoutPanelMain.TabIndex = 0;
-            // 
-            // buttonSpecies
-            // 
-            this.tableLayoutPanelMain.SetColumnSpan(this.buttonSpecies, 2);
-            this.buttonSpecies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSpecies.Location = new System.Drawing.Point(3, 366);
-            this.buttonSpecies.Name = "buttonSpecies";
-            this.buttonSpecies.Size = new System.Drawing.Size(436, 23);
-            this.buttonSpecies.TabIndex = 13;
-            this.buttonSpecies.Text = "Input Species Counts...";
-            this.buttonSpecies.UseVisualStyleBackColor = true;
-            this.buttonSpecies.Click += new System.EventHandler(this.ButtonSpeciesCountsClick);
             // 
             // tableLayoutPanelHhMmSunset
             // 
@@ -173,6 +161,18 @@
             0,
             0,
             0});
+            // 
+            // buttonEnvironment
+            // 
+            this.tableLayoutPanelMain.SetColumnSpan(this.buttonEnvironment, 2);
+            this.buttonEnvironment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEnvironment.Location = new System.Drawing.Point(3, 337);
+            this.buttonEnvironment.Name = "buttonEnvironment";
+            this.buttonEnvironment.Size = new System.Drawing.Size(436, 23);
+            this.buttonEnvironment.TabIndex = 12;
+            this.buttonEnvironment.Text = "Input Environmental Data...";
+            this.buttonEnvironment.UseVisualStyleBackColor = true;
+            this.buttonEnvironment.Click += new System.EventHandler(this.EnvironmentalButtonClick);
             // 
             // labelPpt
             // 
@@ -335,19 +335,6 @@
             this.dateTimePickerDate.Tag = "NIGHT_DATE";
             this.dateTimePickerDate.ValueChanged += new System.EventHandler(this.DateChanged);
             // 
-            // buttonSave
-            // 
-            this.tableLayoutPanelMain.SetColumnSpan(this.buttonSave, 2);
-            this.buttonSave.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSave.Location = new System.Drawing.Point(3, 395);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(436, 23);
-            this.buttonSave.TabIndex = 14;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.SaveButtonClick);
-            // 
             // comboBoxMoonPhase
             // 
             this.comboBoxMoonPhase.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -368,18 +355,6 @@
             this.textBoxDistanceToLightSource.TabIndex = 9;
             this.textBoxDistanceToLightSource.Tag = "DIST_TO_ARTIFICIAL_LIGHT_SOURCE_M";
             this.textBoxDistanceToLightSource.TextChanged += new System.EventHandler(this.EditControlTextChanged);
-            // 
-            // buttonEnvironment
-            // 
-            this.tableLayoutPanelMain.SetColumnSpan(this.buttonEnvironment, 2);
-            this.buttonEnvironment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEnvironment.Location = new System.Drawing.Point(3, 337);
-            this.buttonEnvironment.Name = "buttonEnvironment";
-            this.buttonEnvironment.Size = new System.Drawing.Size(436, 23);
-            this.buttonEnvironment.TabIndex = 12;
-            this.buttonEnvironment.Text = "Input Environmental Data...";
-            this.buttonEnvironment.UseVisualStyleBackColor = true;
-            this.buttonEnvironment.Click += new System.EventHandler(this.EnvironmentalButtonClick);
             // 
             // tableLayoutPanelHmMmSunrise
             // 
@@ -441,6 +416,48 @@
             this.checkedListBoxAltLight.Size = new System.Drawing.Size(236, 94);
             this.checkedListBoxAltLight.TabIndex = 41;
             // 
+            // tableLayoutPanelButtons
+            // 
+            this.tableLayoutPanelButtons.ColumnCount = 3;
+            this.tableLayoutPanelMain.SetColumnSpan(this.tableLayoutPanelButtons, 2);
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanelButtons.Controls.Add(this.buttonSave, 0, 0);
+            this.tableLayoutPanelButtons.Controls.Add(this.buttonSpecies, 2, 0);
+            this.tableLayoutPanelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelButtons.Location = new System.Drawing.Point(0, 426);
+            this.tableLayoutPanelButtons.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanelButtons.Name = "tableLayoutPanelButtons";
+            this.tableLayoutPanelButtons.RowCount = 1;
+            this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelButtons.Size = new System.Drawing.Size(442, 29);
+            this.tableLayoutPanelButtons.TabIndex = 42;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSave.Location = new System.Drawing.Point(3, 3);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(94, 23);
+            this.buttonSave.TabIndex = 14;
+            this.buttonSave.Text = "Save and Close";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.SaveButtonClick);
+            // 
+            // buttonSpecies
+            // 
+            this.buttonSpecies.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSpecies.Location = new System.Drawing.Point(265, 3);
+            this.buttonSpecies.Name = "buttonSpecies";
+            this.buttonSpecies.Size = new System.Drawing.Size(174, 23);
+            this.buttonSpecies.TabIndex = 13;
+            this.buttonSpecies.Text = "Input Species Counts...";
+            this.buttonSpecies.UseVisualStyleBackColor = true;
+            this.buttonSpecies.Click += new System.EventHandler(this.ButtonSpeciesCountsClick);
+            // 
             // NightEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +477,7 @@
             this.tableLayoutPanelHmMmSunrise.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMmSunset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHhSunset)).EndInit();
+            this.tableLayoutPanelButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -494,5 +512,6 @@
         public System.Windows.Forms.DateTimePicker dateTimePickerDate;
         private System.Windows.Forms.CheckedListBox checkedListBoxAltLight;
         public System.Windows.Forms.TextBox textBoxSiteNight;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelButtons;
     }
 }

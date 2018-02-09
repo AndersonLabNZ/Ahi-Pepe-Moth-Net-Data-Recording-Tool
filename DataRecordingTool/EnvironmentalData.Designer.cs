@@ -82,7 +82,7 @@
             this.tableLayoutPanelGroups.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelGroups.Controls.Add(this.groupBoxIbutton, 0, 2);
             this.tableLayoutPanelGroups.Controls.Add(this.groupBoxKestrel, 0, 1);
-            this.tableLayoutPanelGroups.Controls.Add(this.buttonSave, 0, 3);
+            this.tableLayoutPanelGroups.Controls.Add(this.buttonSave, 0, 4);
             this.tableLayoutPanelGroups.Controls.Add(this.groupBoxData, 0, 0);
             this.tableLayoutPanelGroups.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelGroups.Location = new System.Drawing.Point(0, 0);
@@ -92,8 +92,8 @@
             this.tableLayoutPanelGroups.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 181F));
             this.tableLayoutPanelGroups.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
             this.tableLayoutPanelGroups.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.tableLayoutPanelGroups.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanelGroups.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelGroups.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanelGroups.Size = new System.Drawing.Size(465, 470);
             this.tableLayoutPanelGroups.TabIndex = 0;
             // 
@@ -248,11 +248,11 @@
             // buttonSave
             // 
             this.buttonSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSave.Location = new System.Drawing.Point(3, 342);
+            this.buttonSave.Location = new System.Drawing.Point(3, 444);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(459, 23);
             this.buttonSave.TabIndex = 20;
-            this.buttonSave.Text = "Save data";
+            this.buttonSave.Text = "Save and Close";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.SaveButtonClick);
             // 

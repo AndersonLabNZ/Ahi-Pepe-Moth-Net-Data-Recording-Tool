@@ -19,7 +19,7 @@ namespace MothNet.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -271,11 +271,16 @@ namespace MothNet.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //The list of regions in the South Island
-        ///Te Rauawa (E)
-        ///Te Tahiwi (W)
-        ///Te Hiheru (C)
-        ///Te Taurapa (S).
+        ///   Looks up a localized string similar to //The list of regions
+        ///Te Hiku (A)
+        ///NgÄ Paihau (B)
+        ///Te Tuakoko (C)
+        ///Te Ihu (D)
+        ///Te Tahiwi (E)
+        ///Te Rauawa (F)
+        ///Te HÄ«heru (G)
+        ///Te Taurapa (H)
+        ///.
         /// </summary>
         internal static string regions {
             get {
@@ -358,8 +363,11 @@ namespace MothNet.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SWE,Rhapsa scotosialis 
-        ///SWE,Schrankia costaestrigalis 
+        ///   Looks up a localized string similar to A,Dasypodia cymatodes
+        ///A,Pantydia sparsa
+        ///BCD,Trigonistis anticlina
+        ///ABCDEFH,Rhapsa scotosialis 
+        ///ABDEFH,Schrankia costaestrigalis 
         ///.
         /// </summary>
         internal static string species_list_erebidae {
@@ -369,27 +377,27 @@ namespace MothNet.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to W,Chalastra pellurgata 
-        ///WE,Cleora scriptaria 
-        ///SE,Declana egregia 
-        ///S,Declana feredayi 
-        ///CSWE,Declana floccosa
-        ///CSWE,Declana griseata 
-        ///W,Declana hermione 
-        ///CSWE,Declana junctilinea 
-        ///CSWE,Declana leptomera 
-        ///SE,Declana niveata 
-        ///WE,Gellonia dejectaria 
-        ///WE,Gellonia pannularia 
-        ///SWE,Ischalis fortinata 
-        ///W,Ischalis gallaria 
-        ///W,Ischalis nelsonaria 
-        ///W,Ischalis variabilis 
-        ///C,Pseudocoremia cineracia 
-        ///CE,Pseudocoremia colpogramma 
-        ///S,Pseudocoremia fascialata 
-        ///WE,Pseudocoremia indistincta 
-        ///SWE,Pseudocoremia [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to AC,Chalastra aristarcha
+        ///D,Chalastra ochre
+        ///ABCDE,Chalastra pellurgata 
+        ///ABCDEF,Cleora scriptaria 
+        ///ABC,Declana atronivea
+        ///FH,Declana egregia 
+        ///BCH,Declana feredayi 
+        ///ABCDEFGH,Declana floccosa
+        ///BEFGH,Declana griseata 
+        ///ABCE,Declana hermione 
+        ///ABCDEFGH,Declana junctilinea 
+        ///ABCDEFGH,Declana leptomera 
+        ///DFH,Declana niveata
+        ///C,Declana toreuta
+        ///C,Declana sp. A
+        ///ABDEF,Gellonia dejectaria 
+        ///ABCDEF,Gellonia pannularia 
+        ///BCDEFH,Ischalis fortinata 
+        ///ABCDE,Ischalis gallaria 
+        ///ABCDE,Ischalis nelsonaria 
+        ///ABCDE,Ischali [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string species_list_geometridae {
             get {
@@ -398,15 +406,19 @@ namespace MothNet.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C,Aoraia aurimaculata
-        ///S,Aoraia dinodes
-        ///W,Aoraia enysii
-        ///S,Aoraia rufivena
-        ///CSW,Cladoxycanus minos
-        ///S,Heloxycanus patricki
-        ///CSWE,Wiseana copularis
-        ///E,Wiseana signata
-        ///CSWE,Wiseana umbraculata
+        ///   Looks up a localized string similar to ABCD,Aenetus virescens
+        ///C,Dumbletonius characterifer
+        ///ABD,Dumbletonius unimaculatus
+        ///BCD,Wiseana cervinata
+        ///G,Aoraia aurimaculata
+        ///H,Aoraia dinodes
+        ///CE,Aoraia enysii
+        ///H,Aoraia rufivena
+        ///EGH,Cladoxycanus minos
+        ///H,Heloxycanus patricki
+        ///EFGH,Wiseana copularis
+        ///ABDF,Wiseana signata
+        ///BDEFGH,Wiseana umbraculata
         ///.
         /// </summary>
         internal static string species_list_hepialidae {
@@ -416,29 +428,29 @@ namespace MothNet.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CSE,Bityla defigurata
-        ///CE,Bityla sericea
-        ///CSE,Helicoverpa armigera
-        ///CE,Agrotis admirationis
-        ///E,Agrotis innominata complex
-        ///C,Agrotis infusa
-        ///CSWE,Agrotis ipsilon
-        ///CSWE,Aletia cuneata
-        ///C,Aletia falsidica
-        ///CE,Aletia mitis
-        ///CSWE,Aletia moderata
-        ///C,Aletia nobilia
-        ///CWE,Aletia virescen
-        ///C, Aletia sollennis
-        ///E,Austramathes purpurea
-        ///CSE,Austramathes fortis
-        ///S,Diarsia intermixta
-        ///SW,Dipaustica epiastra
-        ///E,Ectopatria aspera
-        ///SWE,Feredayia graminosa
-        ///C,Graphania sp. A
-        ///CSWE,Graphania agorastis
-        ///SE,Graphania averilla        /// [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to ABCFGH,Bityla defigurata
+        ///FG,Bityla sericea
+        ///ABDFGH,Helicoverpa armigera
+        ///FG,Agrotis admirationis
+        ///ABD,Agrotis innominata
+        ///F,Agrotis innominata complex
+        ///G,Agrotis infusa
+        ///ABCDEFGH,Agrotis ipsilon
+        ///A,Agrotis munda
+        ///EFGH,Aletia cuneata
+        ///C,Aletia dentata
+        ///G,Aletia falsidica
+        ///FG,Aletia mitis
+        ///BCDEFGH,Aletia moderata
+        ///G,Aletia nobilia
+        ///BCEFG,Aletia virescens
+        ///G, Aletia sollennis
+        ///ACFGH,Austramathes fortis
+        ///ACF,Austramathes purpurea
+        ///A,Cosmodes elegans
+        ///ABCDH,Diarsia intermixta
+        ///BCDEH,Dipaustica epiastra
+        ///F,Ectop [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string species_list_noctuidae {
             get {
@@ -447,25 +459,23 @@ namespace MothNet.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1
-        ///2
-        ///3
-        ///4
-        ///5
-        ///6
-        ///7
-        ///8
-        ///9
-        ///10
-        ///11
-        ///12
-        ///13
-        ///14
-        ///15
-        ///16
-        ///17
-        ///18
-        ///19
+        ///   Looks up a localized string similar to A,Uraba lugens
+        ///.
+        /// </summary>
+        internal static string species_list_nolidae {
+            get {
+                return ResourceManager.GetString("species_list_nolidae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mus musculus
+        ///Rattus exulans
+        ///Rattus rattus
+        ///Rattus norvegicus
+        ///Erinaceus europaeus occidentalis
+        ///Trichosurus vulpecula
+        ///Mustela erminea
         ///.
         /// </summary>
         internal static string species_list_rodents {
@@ -475,14 +485,77 @@ namespace MothNet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AD,Opodiphthera eucalypti
+        ///.
+        /// </summary>
+        internal static string species_list_saturniidae {
+            get {
+                return ResourceManager.GetString("species_list_saturniidae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AC,Agrius convolvuli
+        ///.
+        /// </summary>
+        internal static string species_list_sphingidae {
+            get {
+                return ResourceManager.GetString("species_list_sphingidae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The subregions for Ngā Paihau
+        ///Waikato (WO)
+        ///Bay of Plenty (BP)
+        ///Gisborne (GB)
+        ///Taupo (TO)
+        ///Taranaki (TK)
+        ///.
+        /// </summary>
+        internal static string subregions_ngā_paihau {
+            get {
+                return ResourceManager.GetString("subregions_ngā_paihau", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //The subregions for Te Hiheru
         ///Mackenzie (MC)
         ///Otago Lakes (OL)
         ///Central Otago (CO).
         /// </summary>
-        internal static string subregions_te_hiheru {
+        internal static string subregions_te_hīheru {
             get {
-                return ResourceManager.GetString("subregions_te_hiheru", resourceCulture);
+                return ResourceManager.GetString("subregions_te_hīheru", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The subregions for Te Hiku
+        ///Northland (ND)
+        ///Auckland (AK)
+        ///Coromandel (CL)
+        ///.
+        /// </summary>
+        internal static string subregions_te_hiku {
+            get {
+                return ResourceManager.GetString("subregions_te_hiku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The subregions for Te Ihu
+        ///Hawkes Bay (HB)
+        ///Rangitikei (RI)
+        ///Whanganui (WI)
+        ///Wairarapa (WA)
+        ///Wellington (WN)
+        ///.
+        /// </summary>
+        internal static string subregions_te_ihu {
+            get {
+                return ResourceManager.GetString("subregions_te_ihu", resourceCulture);
             }
         }
         
@@ -524,6 +597,24 @@ namespace MothNet.Properties {
         internal static string subregions_te_taurapa {
             get {
                 return ResourceManager.GetString("subregions_te_taurapa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The subregions for Te Tuakoko. Partial
+        ///Bay of Plenty (BP)
+        ///Taupo (TO)
+        ///Gisborne (GB)
+        ///Taranaki (TK)
+        ///Hawkes Bay (HB)
+        ///Rangitikei (RI)
+        ///Wairarapa (WA)
+        ///Wellington (WN)
+        ///.
+        /// </summary>
+        internal static string subregions_te_tuakoko {
+            get {
+                return ResourceManager.GetString("subregions_te_tuakoko", resourceCulture);
             }
         }
         

@@ -161,7 +161,7 @@ namespace MothNet
                 }
                 else
                 {
-                    throw new CannotLoadException(e.Message + "\r\nCould not open night data", e);
+                    throw new CannotLoadException("Could not open night data", e);
                 }
             }
             //Any other code goes in the try

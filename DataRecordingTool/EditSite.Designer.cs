@@ -66,17 +66,19 @@
             this.textBoxSchoolGroup = new System.Windows.Forms.TextBox();
             this.labelSchoolGroup = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelButtons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonSaveSite = new System.Windows.Forms.Button();
             this.tableLayoutPanelData.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonNight
             // 
             this.buttonNight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonNight.Location = new System.Drawing.Point(3, 445);
+            this.buttonNight.Location = new System.Drawing.Point(363, 3);
             this.buttonNight.Name = "buttonNight";
-            this.buttonNight.Size = new System.Drawing.Size(474, 23);
+            this.buttonNight.Size = new System.Drawing.Size(114, 23);
             this.buttonNight.TabIndex = 16;
             this.buttonNight.Text = "Input Night Data...";
             this.buttonNight.UseVisualStyleBackColor = true;
@@ -408,7 +410,7 @@
             this.labelSubregion.Name = "labelSubregion";
             this.labelSubregion.Size = new System.Drawing.Size(194, 20);
             this.labelSubregion.TabIndex = 19;
-            this.labelSubregion.Text = "Subregion";
+            this.labelSubregion.Text = "Crosby District";
             this.labelSubregion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxLocation
@@ -525,29 +527,44 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.buttonSaveSite, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanelData, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.buttonNight, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanelButtons, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 442F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(480, 553);
             this.tableLayoutPanel2.TabIndex = 8;
+            // 
+            // tableLayoutPanelButtons
+            // 
+            this.tableLayoutPanelButtons.ColumnCount = 3;
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanelButtons.Controls.Add(this.buttonSaveSite, 0, 0);
+            this.tableLayoutPanelButtons.Controls.Add(this.buttonNight, 2, 0);
+            this.tableLayoutPanelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelButtons.Location = new System.Drawing.Point(0, 524);
+            this.tableLayoutPanelButtons.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanelButtons.Name = "tableLayoutPanelButtons";
+            this.tableLayoutPanelButtons.RowCount = 1;
+            this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelButtons.Size = new System.Drawing.Size(480, 29);
+            this.tableLayoutPanelButtons.TabIndex = 18;
             // 
             // buttonSaveSite
             // 
             this.buttonSaveSite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSaveSite.Location = new System.Drawing.Point(3, 474);
+            this.buttonSaveSite.Location = new System.Drawing.Point(3, 3);
             this.buttonSaveSite.Name = "buttonSaveSite";
-            this.buttonSaveSite.Size = new System.Drawing.Size(474, 23);
+            this.buttonSaveSite.Size = new System.Drawing.Size(94, 23);
             this.buttonSaveSite.TabIndex = 17;
-            this.buttonSaveSite.Text = "Save Site Data";
+            this.buttonSaveSite.Text = "Save and Close";
             this.buttonSaveSite.UseVisualStyleBackColor = true;
             this.buttonSaveSite.Click += new System.EventHandler(this.ButtonSaveClick);
             // 
@@ -565,6 +582,7 @@
             this.tableLayoutPanelData.ResumeLayout(false);
             this.tableLayoutPanelData.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanelButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -609,5 +627,6 @@
         public System.Windows.Forms.TextBox textBoxLongitude;
         public System.Windows.Forms.TextBox textBoxLatitude;
         private System.Windows.Forms.Button buttonSaveSite;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelButtons;
     }
 }

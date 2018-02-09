@@ -1,0 +1,4 @@
+//The subregions for Te Hiku
+Northland (ND)
+Auckland (AK)
+Coromandel (CL)
