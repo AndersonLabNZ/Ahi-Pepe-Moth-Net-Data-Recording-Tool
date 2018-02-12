@@ -1,4 +1,4 @@
-ABCFGH,Bityla defigurata
+﻿ABCFGH,Bityla defigurata
 FG,Bityla sericea
 ABDFGH,Helicoverpa armigera
 FG,Agrotis admirationis

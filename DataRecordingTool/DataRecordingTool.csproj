@@ -56,12 +56,6 @@
     <Compile Include="EditSite.Designer.cs">
       <DependentUpon>EditSite.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnvironmentalData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EnvironmentalData.Designer.cs">
-      <DependentUpon>EnvironmentalData.cs</DependentUpon>
-    </Compile>
     <Compile Include="GetName.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,9 +95,6 @@
     </Compile>
     <EmbeddedResource Include="EditSite.resx">
       <DependentUpon>EditSite.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EnvironmentalData.resx">
-      <DependentUpon>EnvironmentalData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GetName.resx">
       <DependentUpon>GetName.cs</DependentUpon>

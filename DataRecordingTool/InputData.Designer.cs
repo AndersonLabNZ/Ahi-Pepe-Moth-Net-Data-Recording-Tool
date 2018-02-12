@@ -77,16 +77,16 @@
             this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelMainMoths.Size = new System.Drawing.Size(619, 293);
+            this.tableLayoutPanelMainMoths.Size = new System.Drawing.Size(580, 293);
             this.tableLayoutPanelMainMoths.TabIndex = 3;
             // 
             // buttonRemove
             // 
             this.buttonRemove.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRemove.Location = new System.Drawing.Point(472, 270);
+            this.buttonRemove.Location = new System.Drawing.Point(433, 270);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(69, 20);
-            this.buttonRemove.TabIndex = 9;
+            this.buttonRemove.TabIndex = 8;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.RemoveItemClicked);
@@ -97,15 +97,15 @@
             this.textBoxTag.Location = new System.Drawing.Point(223, 270);
             this.textBoxTag.Name = "textBoxTag";
             this.textBoxTag.Size = new System.Drawing.Size(64, 20);
-            this.textBoxTag.TabIndex = 7;
+            this.textBoxTag.TabIndex = 5;
             // 
             // buttonSave
             // 
             this.buttonSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSave.Location = new System.Drawing.Point(547, 270);
+            this.buttonSave.Location = new System.Drawing.Point(508, 270);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(69, 20);
-            this.buttonSave.TabIndex = 4;
+            this.buttonSave.TabIndex = 9;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.SaveButtonClicked);
@@ -122,7 +122,7 @@
             this.listViewMoths.GridLines = true;
             this.listViewMoths.Location = new System.Drawing.Point(3, 29);
             this.listViewMoths.Name = "listViewMoths";
-            this.listViewMoths.Size = new System.Drawing.Size(613, 235);
+            this.listViewMoths.Size = new System.Drawing.Size(574, 235);
             this.listViewMoths.TabIndex = 2;
             this.listViewMoths.UseCompatibleStateImageBehavior = false;
             this.listViewMoths.View = System.Windows.Forms.View.Details;
@@ -153,7 +153,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(363, 270);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(64, 20);
-            this.buttonAdd.TabIndex = 3;
+            this.buttonAdd.TabIndex = 7;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.AddButtonClicked);
@@ -167,7 +167,7 @@
             this.comboBoxSpecies.Location = new System.Drawing.Point(3, 270);
             this.comboBoxSpecies.Name = "comboBoxSpecies";
             this.comboBoxSpecies.Size = new System.Drawing.Size(144, 21);
-            this.comboBoxSpecies.TabIndex = 5;
+            this.comboBoxSpecies.TabIndex = 3;
             // 
             // textBoxVoucher
             // 
@@ -175,7 +175,7 @@
             this.textBoxVoucher.Location = new System.Drawing.Point(153, 270);
             this.textBoxVoucher.Name = "textBoxVoucher";
             this.textBoxVoucher.Size = new System.Drawing.Size(64, 20);
-            this.textBoxVoucher.TabIndex = 6;
+            this.textBoxVoucher.TabIndex = 4;
             // 
             // numericUpDownCount
             // 
@@ -192,7 +192,7 @@
             0});
             this.numericUpDownCount.Name = "numericUpDownCount";
             this.numericUpDownCount.Size = new System.Drawing.Size(64, 20);
-            this.numericUpDownCount.TabIndex = 8;
+            this.numericUpDownCount.TabIndex = 6;
             this.numericUpDownCount.Value = new decimal(new int[] {
             1,
             0,
@@ -203,10 +203,10 @@
             // 
             this.radioButtonRodents.AutoSize = true;
             this.radioButtonRodents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButtonRodents.Location = new System.Drawing.Point(547, 3);
+            this.radioButtonRodents.Location = new System.Drawing.Point(508, 3);
             this.radioButtonRodents.Name = "radioButtonRodents";
             this.radioButtonRodents.Size = new System.Drawing.Size(69, 20);
-            this.radioButtonRodents.TabIndex = 11;
+            this.radioButtonRodents.TabIndex = 1;
             this.radioButtonRodents.Text = "Rodents";
             this.radioButtonRodents.UseVisualStyleBackColor = true;
             this.radioButtonRodents.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChange);
@@ -216,10 +216,10 @@
             this.radioButtonMoths.AutoSize = true;
             this.radioButtonMoths.Checked = true;
             this.radioButtonMoths.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButtonMoths.Location = new System.Drawing.Point(472, 3);
+            this.radioButtonMoths.Location = new System.Drawing.Point(433, 3);
             this.radioButtonMoths.Name = "radioButtonMoths";
             this.radioButtonMoths.Size = new System.Drawing.Size(69, 20);
-            this.radioButtonMoths.TabIndex = 10;
+            this.radioButtonMoths.TabIndex = 0;
             this.radioButtonMoths.TabStop = true;
             this.radioButtonMoths.Text = "Moths";
             this.radioButtonMoths.UseVisualStyleBackColor = true;
@@ -229,9 +229,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 293);
+            this.ClientSize = new System.Drawing.Size(580, 293);
             this.Controls.Add(this.tableLayoutPanelMainMoths);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(596, 332);
             this.Name = "InputData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Input Data";

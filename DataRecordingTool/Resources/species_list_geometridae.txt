@@ -1,4 +1,4 @@
-AC,Chalastra aristarcha
+﻿AC,Chalastra aristarcha
 D,Chalastra ochre
 ABCDE,Chalastra pellurgata 
 ABCDEF,Cleora scriptaria 

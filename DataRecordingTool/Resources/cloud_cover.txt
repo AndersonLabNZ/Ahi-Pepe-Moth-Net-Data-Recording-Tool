@@ -1,4 +1,4 @@
-//The cloud cover information (in oktas)
+﻿//The cloud cover information (in oktas)
 Sky completely clear (0)
 Scattered clouds ~1/8 (1)
 Slightly cloudy ~1/4 (2)

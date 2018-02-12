@@ -1,4 +1,4 @@
-//The subregions for Te Tuakoko. Partial
+﻿//The subregions for Te Tuakoko. Partial
 Bay of Plenty (BP)
 Taupo (TO)
 Gisborne (GB)

@@ -279,13 +279,15 @@ namespace MothNet
                     throw new CannotLoadException(string.Format("Expected four columns for species data - but got {0} instead", list.Count));
                 }
             }
-            if (!Int32.TryParse(list[3], out int count))
+            else if (!Int32.TryParse(list[3], out int count))
             {
                 throw new CannotLoadException(string.Format("Expected an integer for the amount but got \"{0}\" instaed", list[3]));
             }
-
-            ListViewItem item = new ListViewItem(list.ToArray());
-            AddItem(item);
+            else
+            {
+                ListViewItem item = new ListViewItem(list.ToArray());
+                AddItem(item);
+            }
         }
 
         public bool CheckDuplicate()

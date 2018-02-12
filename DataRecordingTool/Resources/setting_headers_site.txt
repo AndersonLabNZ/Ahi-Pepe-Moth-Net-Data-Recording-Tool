@@ -1,4 +1,4 @@
-//The settings file headers for the night data
+﻿//The settings file headers for the night data
 SCHOOL_GROUP
 LOCATION
 SITE_TYPE

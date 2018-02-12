@@ -55,7 +55,7 @@
             this.comboBoxSiteName.Location = new System.Drawing.Point(3, 3);
             this.comboBoxSiteName.Name = "comboBoxSiteName";
             this.comboBoxSiteName.Size = new System.Drawing.Size(278, 21);
-            this.comboBoxSiteName.TabIndex = 2;
+            this.comboBoxSiteName.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 

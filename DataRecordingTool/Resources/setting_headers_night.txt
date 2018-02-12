@@ -1,4 +1,4 @@
-//The settings file headers for the night data
+﻿//The settings file headers for the night data
 SITE_NAME
 NIGHT_DATE
 SITENIGHT_ID

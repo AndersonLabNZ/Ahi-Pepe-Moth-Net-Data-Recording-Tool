@@ -1,4 +1,4 @@
-//The distance to the nearest form of shrub or tree
+﻿//The distance to the nearest form of shrub or tree
 Under canopy (0)
 Overhanging (1)
 Right next to - <1m (2)

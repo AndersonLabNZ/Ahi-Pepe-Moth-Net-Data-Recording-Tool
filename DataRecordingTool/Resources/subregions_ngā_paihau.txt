@@ -1,4 +1,4 @@
-//The subregions for Ngā Paihau
+﻿//The subregions for Ngā Paihau
 Waikato (WO)
 Bay of Plenty (BP)
 Gisborne (GB)

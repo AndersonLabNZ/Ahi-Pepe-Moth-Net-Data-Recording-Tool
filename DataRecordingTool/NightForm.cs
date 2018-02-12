@@ -36,33 +36,19 @@ namespace MothNet
         public NightForm(EditSite data)
         {
             //Any other code goes in the try
-            try
-            {
-                EditSite = data;
-                string temp = NightsDir; //Force folder creation
-                InitializeComponent();
+            EditSite = data;
+            string temp = NightsDir; //Force folder creation
+            InitializeComponent();
 
-                //Iterate through any pre-existing nights
-                foreach (string s in Directory.EnumerateDirectories(NightsDir))
-                {
-                    if (Guid.TryParse(Path.GetFileName(s), out Guid guid))
-                    {
-                        //If the name is a valid GUID add it to the GUID list
-                        listBoxNights.Items.Add(new GuidItem(guid, HelperFunctions.LoadName(s, "night_name.txt")));
-                    }
-                }
-            }
-            catch (Exception e) //Catch any exception
+            //Iterate through any pre-existing nights
+            foreach (string s in Directory.EnumerateDirectories(NightsDir))
             {
-                if (e is CannotLoadException)
+                if (Guid.TryParse(Path.GetFileName(s), out Guid guid))
                 {
-                    //If the exception is a cannot load exception, throw it up the stack again
-                    throw;
+                    //If the name is a valid GUID add it to the GUID list
+                    listBoxNights.Items.Add(new GuidItem(guid, HelperFunctions.LoadName(s, "night_name.txt")));
                 }
-                //Otherwise. create a new exception with the origonal exception as the inner exception
-                throw new CannotLoadException("Cannot load night data", e);
             }
-            //Any other code goes in the try     
         }
 
         /// <summary>
@@ -174,18 +160,10 @@ namespace MothNet
         /// <param name="e">The event arguments</param>
         private void SaveButtonClick(object sender, EventArgs e)
         {
-            //Make sure that there are actually nights to save
-            int count = listBoxNights.Items.Count;
-            if (count == 0)
-            {
-                MessageBox.Show("There is no data for any nights", "No Nights", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             //Make sure that no nights are duplicated. Make all comparisons
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < listBoxNights.Items.Count; i++)
             {
-                for (int j = i + 1; j < count; j++)
+                for (int j = i + 1; j < listBoxNights.Items.Count; j++)
                 {
                     NightEdit left = (NightEdit)listBoxNights.Items[i];
                     NightEdit right = (NightEdit)listBoxNights.Items[j];
@@ -222,7 +200,7 @@ namespace MothNet
                 //Create a temportay directory, by (if required, deleting), and creating it
                 string tempDir = Path.Combine(HelperFunctions.ParentDir, "temp");
 
-                
+
 
                 Directory.CreateDirectory(tempDir);
 
@@ -266,10 +244,12 @@ namespace MothNet
                 catch (FileNotFoundException) { }
                 catch (DirectoryNotFoundException) { }
                 //If the file we are deleting doesn't exist don't complain
-                
+
                 //Create a zip file
                 ZipFile.CreateFromDirectory(tempDir, dialog.FileName);
             }
+
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -281,6 +261,12 @@ namespace MothNet
         private void HandleFormClosing(object sender, FormClosingEventArgs e)
         {
             HelperFunctions.HandleFormClosing(sender, e);
+        }
+
+        private void EditSiteButtonClick(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Hide();
         }
     }
 }

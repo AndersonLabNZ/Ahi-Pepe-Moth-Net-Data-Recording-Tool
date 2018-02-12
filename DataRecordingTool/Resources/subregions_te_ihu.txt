@@ -1,4 +1,4 @@
-//The subregions for Te Ihu
+﻿//The subregions for Te Ihu
 Hawkes Bay (HB)
 Rangitikei (RI)
 Whanganui (WI)

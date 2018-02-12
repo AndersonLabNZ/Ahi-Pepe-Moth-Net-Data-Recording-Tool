@@ -76,11 +76,12 @@
             // buttonNight
             // 
             this.buttonNight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonNight.Location = new System.Drawing.Point(363, 3);
+            this.buttonNight.Location = new System.Drawing.Point(427, 3);
             this.buttonNight.Name = "buttonNight";
             this.buttonNight.Size = new System.Drawing.Size(114, 23);
-            this.buttonNight.TabIndex = 16;
-            this.buttonNight.Text = "Input Night Data...";
+            this.buttonNight.TabIndex = 18;
+            this.buttonNight.Text = "Input Night Data >>";
+            this.buttonNight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonNight.UseVisualStyleBackColor = true;
             this.buttonNight.Click += new System.EventHandler(this.ButtonNightClick);
             // 
@@ -91,7 +92,7 @@
             this.comboBoxShrubDistance.FormattingEnabled = true;
             this.comboBoxShrubDistance.Location = new System.Drawing.Point(203, 419);
             this.comboBoxShrubDistance.Name = "comboBoxShrubDistance";
-            this.comboBoxShrubDistance.Size = new System.Drawing.Size(274, 21);
+            this.comboBoxShrubDistance.Size = new System.Drawing.Size(338, 21);
             this.comboBoxShrubDistance.TabIndex = 16;
             this.comboBoxShrubDistance.Tag = "DISTANCE_TO_NEAREST_SHRUB_M";
             this.comboBoxShrubDistance.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
@@ -103,7 +104,7 @@
             this.comboBoxCanopyHeight.FormattingEnabled = true;
             this.comboBoxCanopyHeight.Location = new System.Drawing.Point(203, 393);
             this.comboBoxCanopyHeight.Name = "comboBoxCanopyHeight";
-            this.comboBoxCanopyHeight.Size = new System.Drawing.Size(274, 21);
+            this.comboBoxCanopyHeight.Size = new System.Drawing.Size(338, 21);
             this.comboBoxCanopyHeight.TabIndex = 15;
             this.comboBoxCanopyHeight.Tag = "HEIGHT_OF_SURROUNDING_VEG_M";
             this.comboBoxCanopyHeight.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
@@ -170,7 +171,7 @@
             this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelData.Size = new System.Drawing.Size(480, 442);
+            this.tableLayoutPanelData.Size = new System.Drawing.Size(544, 442);
             this.tableLayoutPanelData.TabIndex = 7;
             // 
             // textBoxSlope
@@ -178,7 +179,7 @@
             this.textBoxSlope.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxSlope.Location = new System.Drawing.Point(203, 315);
             this.textBoxSlope.Name = "textBoxSlope";
-            this.textBoxSlope.Size = new System.Drawing.Size(274, 20);
+            this.textBoxSlope.Size = new System.Drawing.Size(338, 20);
             this.textBoxSlope.TabIndex = 12;
             this.textBoxSlope.Tag = "SLOPE_DEG";
             this.textBoxSlope.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
@@ -188,7 +189,7 @@
             this.textBoxAltitude.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxAltitude.Location = new System.Drawing.Point(203, 289);
             this.textBoxAltitude.Name = "textBoxAltitude";
-            this.textBoxAltitude.Size = new System.Drawing.Size(274, 20);
+            this.textBoxAltitude.Size = new System.Drawing.Size(338, 20);
             this.textBoxAltitude.TabIndex = 11;
             this.textBoxAltitude.Tag = "ALTITUDE_M";
             this.textBoxAltitude.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
@@ -198,7 +199,7 @@
             this.textBoxAccuracy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxAccuracy.Location = new System.Drawing.Point(203, 263);
             this.textBoxAccuracy.Name = "textBoxAccuracy";
-            this.textBoxAccuracy.Size = new System.Drawing.Size(274, 20);
+            this.textBoxAccuracy.Size = new System.Drawing.Size(338, 20);
             this.textBoxAccuracy.TabIndex = 10;
             this.textBoxAccuracy.Tag = "ACCURACY_M";
             this.textBoxAccuracy.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
@@ -208,7 +209,7 @@
             this.textBoxLongitude.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxLongitude.Location = new System.Drawing.Point(203, 237);
             this.textBoxLongitude.Name = "textBoxLongitude";
-            this.textBoxLongitude.Size = new System.Drawing.Size(274, 20);
+            this.textBoxLongitude.Size = new System.Drawing.Size(338, 20);
             this.textBoxLongitude.TabIndex = 9;
             this.textBoxLongitude.Tag = "LONG_DECDEG";
             this.textBoxLongitude.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
@@ -218,7 +219,7 @@
             this.textBoxLatitude.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxLatitude.Location = new System.Drawing.Point(203, 211);
             this.textBoxLatitude.Name = "textBoxLatitude";
-            this.textBoxLatitude.Size = new System.Drawing.Size(274, 20);
+            this.textBoxLatitude.Size = new System.Drawing.Size(338, 20);
             this.textBoxLatitude.TabIndex = 8;
             this.textBoxLatitude.Tag = "LAT_DECDEG";
             this.textBoxLatitude.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
@@ -230,7 +231,7 @@
             this.comboBoxPredatorRemoval.FormattingEnabled = true;
             this.comboBoxPredatorRemoval.Location = new System.Drawing.Point(203, 133);
             this.comboBoxPredatorRemoval.Name = "comboBoxPredatorRemoval";
-            this.comboBoxPredatorRemoval.Size = new System.Drawing.Size(274, 21);
+            this.comboBoxPredatorRemoval.Size = new System.Drawing.Size(338, 21);
             this.comboBoxPredatorRemoval.TabIndex = 5;
             this.comboBoxPredatorRemoval.Tag = "PREDATOR_REMOVAL_REGIME";
             // 
@@ -241,7 +242,7 @@
             this.comboBoxVegetationRestoration.FormattingEnabled = true;
             this.comboBoxVegetationRestoration.Location = new System.Drawing.Point(203, 107);
             this.comboBoxVegetationRestoration.Name = "comboBoxVegetationRestoration";
-            this.comboBoxVegetationRestoration.Size = new System.Drawing.Size(274, 21);
+            this.comboBoxVegetationRestoration.Size = new System.Drawing.Size(338, 21);
             this.comboBoxVegetationRestoration.TabIndex = 4;
             this.comboBoxVegetationRestoration.Tag = "VEG_RES_REGIME";
             // 
@@ -285,7 +286,7 @@
             this.comboBoxSubRegions.FormattingEnabled = true;
             this.comboBoxSubRegions.Location = new System.Drawing.Point(203, 185);
             this.comboBoxSubRegions.Name = "comboBoxSubRegions";
-            this.comboBoxSubRegions.Size = new System.Drawing.Size(274, 21);
+            this.comboBoxSubRegions.Size = new System.Drawing.Size(338, 21);
             this.comboBoxSubRegions.TabIndex = 7;
             this.comboBoxSubRegions.Tag = "SUB_REGION";
             // 
@@ -296,7 +297,7 @@
             this.comboBoxRegions.FormattingEnabled = true;
             this.comboBoxRegions.Location = new System.Drawing.Point(203, 159);
             this.comboBoxRegions.Name = "comboBoxRegions";
-            this.comboBoxRegions.Size = new System.Drawing.Size(274, 21);
+            this.comboBoxRegions.Size = new System.Drawing.Size(338, 21);
             this.comboBoxRegions.TabIndex = 6;
             this.comboBoxRegions.Tag = "REGION";
             this.comboBoxRegions.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
@@ -308,7 +309,7 @@
             this.comboBoxAspect.FormattingEnabled = true;
             this.comboBoxAspect.Location = new System.Drawing.Point(203, 341);
             this.comboBoxAspect.Name = "comboBoxAspect";
-            this.comboBoxAspect.Size = new System.Drawing.Size(274, 21);
+            this.comboBoxAspect.Size = new System.Drawing.Size(338, 21);
             this.comboBoxAspect.TabIndex = 13;
             this.comboBoxAspect.Tag = "ASPECT";
             this.comboBoxAspect.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
@@ -418,7 +419,7 @@
             this.textBoxLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxLocation.Location = new System.Drawing.Point(203, 29);
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(274, 20);
+            this.textBoxLocation.Size = new System.Drawing.Size(338, 20);
             this.textBoxLocation.TabIndex = 1;
             this.textBoxLocation.Tag = "LOCATION";
             this.textBoxLocation.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
@@ -429,8 +430,8 @@
             this.textBoxSiteName.Location = new System.Drawing.Point(203, 81);
             this.textBoxSiteName.Name = "textBoxSiteName";
             this.textBoxSiteName.ReadOnly = true;
-            this.textBoxSiteName.Size = new System.Drawing.Size(274, 20);
-            this.textBoxSiteName.TabIndex = 2;
+            this.textBoxSiteName.Size = new System.Drawing.Size(338, 20);
+            this.textBoxSiteName.TabIndex = 3;
             this.textBoxSiteName.Tag = "SITE_NAME";
             this.textBoxSiteName.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
@@ -441,7 +442,7 @@
             this.comboBoxSurroundingVegetation.FormattingEnabled = true;
             this.comboBoxSurroundingVegetation.Location = new System.Drawing.Point(203, 367);
             this.comboBoxSurroundingVegetation.Name = "comboBoxSurroundingVegetation";
-            this.comboBoxSurroundingVegetation.Size = new System.Drawing.Size(274, 21);
+            this.comboBoxSurroundingVegetation.Size = new System.Drawing.Size(338, 21);
             this.comboBoxSurroundingVegetation.TabIndex = 14;
             this.comboBoxSurroundingVegetation.Tag = "SURROUNDING_VEG";
             this.comboBoxSurroundingVegetation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
@@ -497,8 +498,8 @@
             this.comboBoxSiteType.FormattingEnabled = true;
             this.comboBoxSiteType.Location = new System.Drawing.Point(203, 55);
             this.comboBoxSiteType.Name = "comboBoxSiteType";
-            this.comboBoxSiteType.Size = new System.Drawing.Size(274, 21);
-            this.comboBoxSiteType.TabIndex = 3;
+            this.comboBoxSiteType.Size = new System.Drawing.Size(338, 21);
+            this.comboBoxSiteType.TabIndex = 2;
             this.comboBoxSiteType.Tag = "SITE_TYPE";
             this.comboBoxSiteType.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
             // 
@@ -507,7 +508,7 @@
             this.textBoxSchoolGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxSchoolGroup.Location = new System.Drawing.Point(203, 3);
             this.textBoxSchoolGroup.Name = "textBoxSchoolGroup";
-            this.textBoxSchoolGroup.Size = new System.Drawing.Size(274, 20);
+            this.textBoxSchoolGroup.Size = new System.Drawing.Size(338, 20);
             this.textBoxSchoolGroup.TabIndex = 0;
             this.textBoxSchoolGroup.Tag = "SCHOOL_GROUP";
             this.textBoxSchoolGroup.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
@@ -537,24 +538,24 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 442F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(480, 553);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(544, 470);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
             // tableLayoutPanelButtons
             // 
             this.tableLayoutPanelButtons.ColumnCount = 3;
-            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanelButtons.Controls.Add(this.buttonSaveSite, 0, 0);
             this.tableLayoutPanelButtons.Controls.Add(this.buttonNight, 2, 0);
             this.tableLayoutPanelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelButtons.Location = new System.Drawing.Point(0, 524);
+            this.tableLayoutPanelButtons.Location = new System.Drawing.Point(0, 441);
             this.tableLayoutPanelButtons.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelButtons.Name = "tableLayoutPanelButtons";
             this.tableLayoutPanelButtons.RowCount = 1;
             this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelButtons.Size = new System.Drawing.Size(480, 29);
+            this.tableLayoutPanelButtons.Size = new System.Drawing.Size(544, 29);
             this.tableLayoutPanelButtons.TabIndex = 18;
             // 
             // buttonSaveSite
@@ -562,9 +563,9 @@
             this.buttonSaveSite.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSaveSite.Location = new System.Drawing.Point(3, 3);
             this.buttonSaveSite.Name = "buttonSaveSite";
-            this.buttonSaveSite.Size = new System.Drawing.Size(94, 23);
+            this.buttonSaveSite.Size = new System.Drawing.Size(114, 23);
             this.buttonSaveSite.TabIndex = 17;
-            this.buttonSaveSite.Text = "Save and Close";
+            this.buttonSaveSite.Text = "<< Save and Exit";
             this.buttonSaveSite.UseVisualStyleBackColor = true;
             this.buttonSaveSite.Click += new System.EventHandler(this.ButtonSaveClick);
             // 
@@ -572,9 +573,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 553);
+            this.ClientSize = new System.Drawing.Size(544, 470);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(560, 509);
             this.Name = "EditSite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Site Data";

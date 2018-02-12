@@ -1,4 +1,4 @@
-//The different directions for aspect (and wind speed)
+﻿//The different directions for aspect (and wind speed)
 Flat
 N
 NNE

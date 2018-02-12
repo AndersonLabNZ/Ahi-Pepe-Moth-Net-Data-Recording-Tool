@@ -70,6 +70,14 @@ namespace MothNet
             }
         }
 
+        private char MothRegion
+        {
+            get
+            {
+                return ((ComboBoxItem)comboBoxRegions.Items[comboBoxRegions.SelectedIndex]).FileValue.ToCharArray()[0];
+            }
+        }
+
         /// <summary>
         /// Whether the user wants to save the data on close, i.e. are they saving the site or cancelling
         /// </summary>
@@ -122,10 +130,10 @@ namespace MothNet
                     //Create a GUID for this site. Odds of a collision very very small
                     FileGuid = Guid.NewGuid();
 
-                    //Create the site directory
+                    //Create the site directory. Any exceptions thrown here would be because of a software, as opposed to a user error, so don't catch
                     Directory.CreateDirectory(FolderDirectory);
 
-                    //Create the setings and name diles
+                    //Create the setings and name files. Again, no exceptions here would be caused by the user doing somethign stupid
                     SettingsStream = new FileStream(DataFileName, FileMode.Create, FileAccess.ReadWrite, FileShare.Read);
                     NameStream = new FileStream(NameFileName, FileMode.Create, FileAccess.ReadWrite, FileShare.Read);
                 }
@@ -133,8 +141,17 @@ namespace MothNet
                 {
                     //Set Guid and load
                     FileGuid = guid;
-                    SettingsStream = new FileStream(DataFileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
-                    NameStream = new FileStream(NameFileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
+
+                    try
+                    {
+                        //Load files
+                        SettingsStream = new FileStream(DataFileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
+                        NameStream = new FileStream(NameFileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
+                    }
+                    catch (FileNotFoundException except)
+                    {
+                        throw new CannotLoadException("Could not load settings or name file. The file was not found.", except);
+                    }
 
                     //Load the data into the fields
                     LoadSite();
@@ -155,15 +172,11 @@ namespace MothNet
                 //Check all is ok.
                 ValidationHelper();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 //Close the files and close the form
                 CloseHandles();
-                if (e is CannotLoadException)
-                {
-                    throw;
-                }
-                throw new CannotLoadException("Could not open or create site settings file: " + e.Message, e);
+                throw;
             }
             //Any other code goes in the try
         }
@@ -224,26 +237,27 @@ namespace MothNet
         /// </summary>
         private void UpdateSubRegions()
         {
-            //Assuming the region doesn't change, the cleared and now restored data shouldn't affect the selected index
-            HelperFunctions.AddFileItemsToComboBox(comboBoxSubRegions, true, "subregions_" + ((ComboBoxItem)comboBoxRegions.Items[comboBoxRegions.SelectedIndex]).Value.ToLower().Replace(' ', '_'));
+            if (prevRegion != MothRegion)
+            {
+                //Only update if region changes
+                HelperFunctions.AddFileItemsToComboBox(comboBoxSubRegions, true, "subregions_" + ((ComboBoxItem)comboBoxRegions.Items[comboBoxRegions.SelectedIndex]).Value.ToLower().Replace(' ', '_'));
+            }
         }
 
         /// <summary>
         /// Updates the list of species that would be expected in the region
         /// </summary>
         private void UpdateSpeciesLists()
-        {
-            char species = ((ComboBoxItem)comboBoxRegions.Items[comboBoxRegions.SelectedIndex]).FileValue.ToCharArray()[0];
-            
+        {            
             //Don't show the message / update list if there are no nights with data anyway
-            if (Nights.listBoxNights.Items.Count  > 0 && species != prevRegion)
+            if (Nights.listBoxNights.Items.Count  > 0 && MothRegion != prevRegion)
             {
-                if (MessageBox.Show("Warning: Updating the region may invalidate some species list data.\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Updating the selected region also updates the active species list for the species count data.\nChanging the region may invalidate this data.\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     //If desired, update the nights
                     foreach (NightEdit edit in Nights.listBoxNights.Items)
                     {
-                        edit.InputDataForm.UpdateSpeciesList(species);
+                        edit.InputDataForm.UpdateSpeciesList(MothRegion);
                     }
                 }
                 else
@@ -254,9 +268,6 @@ namespace MothNet
                         //Find the index of the region. This is based on file value so IndexOf wouldn't work, as a new ComboBoxItem would need to be made
                         if (((ComboBoxItem)comboBoxRegions.Items[i]).FileValue == prevRegion.ToString())
                         {
-                            //Reset the species as well
-                            species = prevRegion;
-
                             //This will cause this function top to be called again, but species will equal prevRegion, so all will be fine, and this will be skipped, so there should be no recursion.
                             comboBoxRegions.SelectedIndex = i;
                             break;
@@ -264,9 +275,6 @@ namespace MothNet
                     }
                 }
             }
-
-            //Update the previous region
-            prevRegion = species;
         }
 
         /// <summary>
@@ -463,6 +471,9 @@ namespace MothNet
                 UpdateSpeciesLists();
                 UpdateSubRegions();
                 ValidationHelper();
+
+                //Update the previous region
+                prevRegion = MothRegion;
             }
         }
 
@@ -505,7 +516,22 @@ namespace MothNet
         /// <param name="e">The event arguments</param>
         private void ButtonNightClick(object sender, EventArgs e)
         {
-            Nights.ShowDialog();
+            this.Hide();
+
+            //Manually set size and location to "replace" this window
+            Nights.StartPosition = FormStartPosition.Manual;
+            Nights.Location = this.Location;
+            Nights.Size = this.Size;
+
+            DialogResult res = Nights.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Show();
+            }
         }
 
         /// <summary>

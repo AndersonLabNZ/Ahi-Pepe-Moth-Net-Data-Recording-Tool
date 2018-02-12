@@ -1,4 +1,4 @@
-//The height of the canopy
+﻿//The height of the canopy
 Bare ground (0)
 Approx. ankle height - <5cm (0.05)
 Approx. knee height - <40cm (0.4)

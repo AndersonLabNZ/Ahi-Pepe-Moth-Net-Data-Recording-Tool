@@ -1,4 +1,4 @@
-//Data for the alternate light sources
+﻿//Data for the alternate light sources
 No artificial light (NONE)
 Scattered house lights - mainly orange (HOUSE_LOW)
 Scattered house lights - mainly orange (HOUSE_LOW)

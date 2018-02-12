@@ -1,4 +1,4 @@
-//The different typed of surroundng vegetation, with a three letter code
+﻿//The different typed of surroundng vegetation, with a three letter code
 School playing field (SCP)
 Short grazed pasture (SGP)
 Irrigated dairy pasture (IDP)
