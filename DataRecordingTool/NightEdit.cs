@@ -154,7 +154,7 @@ namespace MothNet
                         NightStream = new FileStream(DataFileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
                         NameStream = new FileStream(NameFileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
                     }
-                    catch (FileNotFoundException except)
+                    catch (IOException except) when(except is DirectoryNotFoundException || except is FileNotFoundException)
                     {
                         throw new CannotLoadException("Could not load settings or name file. The file was not found.", except);
                     }
@@ -167,7 +167,7 @@ namespace MothNet
                     IButtonFile = DataFileItem.Hold(Path.Combine(FolderDirectory, "ibutton_data.txt"), creating);
                 }
                 
-                catch (FileNotFoundException except)
+                catch (IOException except) when (except is DirectoryNotFoundException || except is FileNotFoundException)
                 {
                     if (!creating)
                     {
@@ -457,8 +457,11 @@ namespace MothNet
             byte[] nameBytes = Encoding.UTF8.GetBytes(NightID.ToCharArray());
 
             NameStream.Write(nameBytes, 0, nameBytes.Length);
+
+            //Flush and seek to beginning
             NameStream.Flush();
             NameStream.Seek(0, SeekOrigin.Begin);
+            NameStream.SetLength(nameBytes.LongLength);
 
             NightStream.Seek(0, SeekOrigin.Begin);
             string[] list = HelperFunctions.GetResourceList("setting_headers_night");
@@ -511,6 +514,7 @@ namespace MothNet
             NightStream.Write(bytes, 0, bytes.Length);
             NightStream.Flush();
             NightStream.Seek(0, SeekOrigin.Begin);
+            NightStream.SetLength(bytes.LongLength);
         }
 
         /// <summary>
@@ -569,17 +573,13 @@ namespace MothNet
         { 
             KestrelFile?.Dispose();
             IButtonFile?.Dispose();
-            InputDataForm?.Moths?.Dispose();
-            InputDataForm?.Rodents?.Dispose();
+            InputDataForm?.CloseHandles();
+            InputDataForm?.Close();
             NightStream?.Close();
             NameStream?.Close();
             if (creating && !Saving)
             {
-                try
-                {
-                    Directory.Delete(FolderDirectory, true);
-                }
-                catch (DirectoryNotFoundException) { }
+                HelperFunctions.SafeDeleteDirectory(FolderDirectory);
             }
         }
 
@@ -592,6 +592,7 @@ namespace MothNet
         {
             Saving = true;
             SaveNight();
+            InputDataForm.SaveAbundances();
             CloseHandles();
             Close();
         }
@@ -675,6 +676,7 @@ namespace MothNet
 
             //All data may be ok but at least one form of environmental data must be selected 
             buttonSave.Enabled = ok && (checkBoxKestrelAvailable.Checked || checkBoxKestFileAvailable.Checked || checkBoxIbuttonFileAvailable.Checked);
+            buttonSpecies.Enabled = buttonSave.Enabled;
             return buttonSave.Enabled;
         }
 
@@ -755,7 +757,33 @@ namespace MothNet
         /// <param name="e">The event arguments</param>
         private void ButtonSpeciesCountsClick(object sender, EventArgs e)
         {
-            InputDataForm.ShowDialog();
+            this.Hide();
+
+            //Manually set size and location to "replace" this window
+            InputDataForm.StartPosition = FormStartPosition.Manual;
+
+            InputDataForm.Size = this.Size;
+            InputDataForm.Location = this.Location;
+
+            DialogResult res = InputDataForm.ShowDialog();
+            
+            //Closing without saving
+            if (res == DialogResult.Cancel)
+            {
+                this.Close();
+            }
+            else if (res == DialogResult.Yes) //Closing and saving
+            {
+                SaveNight();
+                this.Close();
+            }
+            else if (res == DialogResult.OK) //Going back
+            {
+                this.Size = InputDataForm.Size;
+                this.Location = InputDataForm.Location;
+
+                this.Show();
+            }
         }
 
         /// <summary>

@@ -66,7 +66,7 @@ namespace MothNet
                 try
                 {
                     //Delete the directory
-                    Directory.Delete(Path.Combine(NightsDir, item.Guid.ToString("B")), true);
+                    HelperFunctions.SafeDeleteDirectory(Path.Combine(NightsDir, item.Guid.ToString("B")));
                 }
                 finally
                 {
@@ -169,7 +169,7 @@ namespace MothNet
                     NightEdit right = (NightEdit)listBoxNights.Items[j];
                     if (left.dateTimePickerDate.Value.Date == right.dateTimePickerDate.Value.Date)
                     {
-                        MessageBox.Show("Some nights have the same date", "Duplicate Nights", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Some nights have the same date - each night should be unique", "Duplicate Nights", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -191,7 +191,7 @@ namespace MothNet
                     ValidateNames = true
                 };
 
-                //Return if they cancel
+                //Return if they cancel. Don't close the form
                 if (dialog.ShowDialog() != DialogResult.OK)
                 {
                     return;
@@ -200,9 +200,12 @@ namespace MothNet
                 //Create a temportay directory, by (if required, deleting), and creating it
                 string tempDir = Path.Combine(HelperFunctions.ParentDir, "temp");
 
-
+                HelperFunctions.SafeDeleteDirectory(tempDir);
 
                 Directory.CreateDirectory(tempDir);
+
+                //Make sure to save data first
+                EditSite.SaveSite();
 
                 try
                 {
@@ -212,9 +215,9 @@ namespace MothNet
                     //Now copy all the night data
                     foreach (GuidItem item in listBoxNights.Items)
                     {
-                        string parentPath = Path.Combine(HelperFunctions.SitesDir, EditSite.FileGuid.ToString(), "nights", item.ToString());
+                        string parentPath = Path.Combine(HelperFunctions.SitesDir, EditSite.FileGuid.ToString("B").ToUpper(), "nights", item.Guid.ToString("B").ToUpper());
                         string idName = HelperFunctions.LoadName(parentPath, "night_name.txt");
-                        File.Copy(Path.Combine(parentPath, "site_data.txt"), Path.Combine(tempDir, idName + ".txt"));
+                        File.Copy(Path.Combine(parentPath, "night_data.txt"), Path.Combine(tempDir, idName + ".txt"));
 
                         File.Copy(Path.Combine(parentPath, "ibutton_data.txt"), Path.Combine(tempDir, idName + "_ibutton.txt"));
                         File.Copy(Path.Combine(parentPath, "kestrel_data.txt"), Path.Combine(tempDir, idName + "_kestrel.txt"));
@@ -227,45 +230,32 @@ namespace MothNet
                 {
                     MessageBox.Show("Could not copy data - " + except.Message, "Unable to Export Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    try
-                    {
-                        Directory.Delete(tempDir, true);
-                    }
-                    catch (DirectoryNotFoundException) { }
+                    HelperFunctions.SafeDeleteDirectory(tempDir);
 
                     return;
                 }
 
                 //Make sure no file already exists
-                try
-                {
-                    File.Delete(dialog.FileName);
-                }
-                catch (FileNotFoundException) { }
-                catch (DirectoryNotFoundException) { }
-                //If the file we are deleting doesn't exist don't complain
+                HelperFunctions.SafeDeleteFile(dialog.FileName);
 
                 //Create a zip file
                 ZipFile.CreateFromDirectory(tempDir, dialog.FileName);
             }
 
-            this.DialogResult = DialogResult.OK;
+            //Canecl means closing without saving. Have already saved in this method, don't need to do so again
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
         /// <summary>
-        /// Event handler for the form closing event. Closes open file handles
+        /// Event handler for the edit site button
         /// </summary>
-        /// <param name="sender">this</param>
+        /// <param name="sender">The edit site button</param>
         /// <param name="e">The event args</param>
-        private void HandleFormClosing(object sender, FormClosingEventArgs e)
-        {
-            HelperFunctions.HandleFormClosing(sender, e);
-        }
-
         private void EditSiteButtonClick(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            //OK so that the form shows
+            this.DialogResult = DialogResult.OK;
             this.Hide();
         }
     }

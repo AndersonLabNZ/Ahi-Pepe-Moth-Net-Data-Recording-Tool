@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputData));
             this.tableLayoutPanelMainMoths = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonRemove = new System.Windows.Forms.Button();
             this.textBoxTag = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.listViewMoths = new System.Windows.Forms.ListView();
@@ -42,71 +41,64 @@
             this.comboBoxSpecies = new System.Windows.Forms.ComboBox();
             this.textBoxVoucher = new System.Windows.Forms.TextBox();
             this.numericUpDownCount = new System.Windows.Forms.NumericUpDown();
+            this.buttonReturnEdit = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButtonRodents = new System.Windows.Forms.RadioButton();
             this.radioButtonMoths = new System.Windows.Forms.RadioButton();
+            this.buttonRemove = new System.Windows.Forms.Button();
             this.tableLayoutPanelMainMoths.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelMainMoths
             // 
-            this.tableLayoutPanelMainMoths.ColumnCount = 8;
-            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.tableLayoutPanelMainMoths.Controls.Add(this.buttonRemove, 6, 2);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.textBoxTag, 2, 2);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.buttonSave, 7, 2);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.listViewMoths, 0, 1);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.buttonAdd, 4, 2);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.comboBoxSpecies, 0, 2);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.textBoxVoucher, 1, 2);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.numericUpDownCount, 3, 2);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.radioButtonRodents, 7, 0);
-            this.tableLayoutPanelMainMoths.Controls.Add(this.radioButtonMoths, 6, 0);
+            this.tableLayoutPanelMainMoths.ColumnCount = 5;
+            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanelMainMoths.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanelMainMoths.Controls.Add(this.textBoxTag, 2, 1);
+            this.tableLayoutPanelMainMoths.Controls.Add(this.buttonSave, 3, 3);
+            this.tableLayoutPanelMainMoths.Controls.Add(this.listViewMoths, 0, 0);
+            this.tableLayoutPanelMainMoths.Controls.Add(this.buttonAdd, 4, 1);
+            this.tableLayoutPanelMainMoths.Controls.Add(this.comboBoxSpecies, 0, 1);
+            this.tableLayoutPanelMainMoths.Controls.Add(this.textBoxVoucher, 1, 1);
+            this.tableLayoutPanelMainMoths.Controls.Add(this.numericUpDownCount, 3, 1);
+            this.tableLayoutPanelMainMoths.Controls.Add(this.buttonReturnEdit, 0, 3);
+            this.tableLayoutPanelMainMoths.Controls.Add(this.tableLayoutPanel1, 4, 0);
             this.tableLayoutPanelMainMoths.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMainMoths.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanelMainMoths.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelMainMoths.Name = "tableLayoutPanelMainMoths";
-            this.tableLayoutPanelMainMoths.RowCount = 3;
-            this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanelMainMoths.RowCount = 4;
             this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelMainMoths.Size = new System.Drawing.Size(580, 293);
+            this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanelMainMoths.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelMainMoths.Size = new System.Drawing.Size(948, 368);
             this.tableLayoutPanelMainMoths.TabIndex = 3;
-            // 
-            // buttonRemove
-            // 
-            this.buttonRemove.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRemove.Location = new System.Drawing.Point(433, 270);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(69, 20);
-            this.buttonRemove.TabIndex = 8;
-            this.buttonRemove.Text = "Remove";
-            this.buttonRemove.UseVisualStyleBackColor = true;
-            this.buttonRemove.Click += new System.EventHandler(this.RemoveItemClicked);
             // 
             // textBoxTag
             // 
             this.textBoxTag.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxTag.Location = new System.Drawing.Point(223, 270);
+            this.textBoxTag.Location = new System.Drawing.Point(524, 308);
             this.textBoxTag.Name = "textBoxTag";
-            this.textBoxTag.Size = new System.Drawing.Size(64, 20);
+            this.textBoxTag.Size = new System.Drawing.Size(136, 20);
             this.textBoxTag.TabIndex = 5;
             // 
             // buttonSave
             // 
-            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSave.Location = new System.Drawing.Point(508, 270);
+            this.tableLayoutPanelMainMoths.SetColumnSpan(this.buttonSave, 2);
+            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonSave.Location = new System.Drawing.Point(831, 342);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(69, 20);
+            this.buttonSave.Size = new System.Drawing.Size(114, 23);
             this.buttonSave.TabIndex = 9;
-            this.buttonSave.Text = "Save";
+            this.buttonSave.Text = "Finish and Save >>";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.SaveButtonClicked);
             // 
@@ -117,12 +109,12 @@
             this.columnHeaderVoucher,
             this.columnHeaderTag,
             this.columnHeaderCount});
-            this.tableLayoutPanelMainMoths.SetColumnSpan(this.listViewMoths, 8);
+            this.tableLayoutPanelMainMoths.SetColumnSpan(this.listViewMoths, 4);
             this.listViewMoths.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewMoths.GridLines = true;
-            this.listViewMoths.Location = new System.Drawing.Point(3, 29);
+            this.listViewMoths.Location = new System.Drawing.Point(3, 3);
             this.listViewMoths.Name = "listViewMoths";
-            this.listViewMoths.Size = new System.Drawing.Size(574, 235);
+            this.listViewMoths.Size = new System.Drawing.Size(799, 299);
             this.listViewMoths.TabIndex = 2;
             this.listViewMoths.UseCompatibleStateImageBehavior = false;
             this.listViewMoths.View = System.Windows.Forms.View.Details;
@@ -150,9 +142,9 @@
             // buttonAdd
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAdd.Location = new System.Drawing.Point(363, 270);
+            this.buttonAdd.Location = new System.Drawing.Point(808, 308);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(64, 20);
+            this.buttonAdd.Size = new System.Drawing.Size(137, 23);
             this.buttonAdd.TabIndex = 7;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -164,22 +156,23 @@
             this.comboBoxSpecies.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxSpecies.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxSpecies.FormattingEnabled = true;
-            this.comboBoxSpecies.Location = new System.Drawing.Point(3, 270);
+            this.comboBoxSpecies.Location = new System.Drawing.Point(3, 308);
             this.comboBoxSpecies.Name = "comboBoxSpecies";
-            this.comboBoxSpecies.Size = new System.Drawing.Size(144, 21);
+            this.comboBoxSpecies.Size = new System.Drawing.Size(373, 21);
             this.comboBoxSpecies.TabIndex = 3;
             // 
             // textBoxVoucher
             // 
             this.textBoxVoucher.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxVoucher.Location = new System.Drawing.Point(153, 270);
+            this.textBoxVoucher.Location = new System.Drawing.Point(382, 308);
             this.textBoxVoucher.Name = "textBoxVoucher";
-            this.textBoxVoucher.Size = new System.Drawing.Size(64, 20);
+            this.textBoxVoucher.Size = new System.Drawing.Size(136, 20);
             this.textBoxVoucher.TabIndex = 4;
             // 
             // numericUpDownCount
             // 
-            this.numericUpDownCount.Location = new System.Drawing.Point(293, 270);
+            this.numericUpDownCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDownCount.Location = new System.Drawing.Point(666, 308);
             this.numericUpDownCount.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -191,7 +184,7 @@
             0,
             0});
             this.numericUpDownCount.Name = "numericUpDownCount";
-            this.numericUpDownCount.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDownCount.Size = new System.Drawing.Size(136, 20);
             this.numericUpDownCount.TabIndex = 6;
             this.numericUpDownCount.Value = new decimal(new int[] {
             1,
@@ -199,13 +192,45 @@
             0,
             0});
             // 
+            // buttonReturnEdit
+            // 
+            this.buttonReturnEdit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonReturnEdit.Location = new System.Drawing.Point(3, 342);
+            this.buttonReturnEdit.Name = "buttonReturnEdit";
+            this.buttonReturnEdit.Size = new System.Drawing.Size(114, 23);
+            this.buttonReturnEdit.TabIndex = 10;
+            this.buttonReturnEdit.Text = "<< Edit Night Data";
+            this.buttonReturnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReturnEdit.UseVisualStyleBackColor = true;
+            this.buttonReturnEdit.Click += new System.EventHandler(this.ReturnButtonClick);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.radioButtonRodents, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.radioButtonMoths, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonRemove, 0, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(805, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(143, 305);
+            this.tableLayoutPanel1.TabIndex = 11;
+            // 
             // radioButtonRodents
             // 
             this.radioButtonRodents.AutoSize = true;
             this.radioButtonRodents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButtonRodents.Location = new System.Drawing.Point(508, 3);
+            this.radioButtonRodents.Location = new System.Drawing.Point(3, 3);
             this.radioButtonRodents.Name = "radioButtonRodents";
-            this.radioButtonRodents.Size = new System.Drawing.Size(69, 20);
+            this.radioButtonRodents.Size = new System.Drawing.Size(137, 23);
             this.radioButtonRodents.TabIndex = 1;
             this.radioButtonRodents.Text = "Rodents";
             this.radioButtonRodents.UseVisualStyleBackColor = true;
@@ -216,30 +241,43 @@
             this.radioButtonMoths.AutoSize = true;
             this.radioButtonMoths.Checked = true;
             this.radioButtonMoths.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButtonMoths.Location = new System.Drawing.Point(433, 3);
+            this.radioButtonMoths.Location = new System.Drawing.Point(3, 32);
             this.radioButtonMoths.Name = "radioButtonMoths";
-            this.radioButtonMoths.Size = new System.Drawing.Size(69, 20);
+            this.radioButtonMoths.Size = new System.Drawing.Size(137, 23);
             this.radioButtonMoths.TabIndex = 0;
             this.radioButtonMoths.TabStop = true;
             this.radioButtonMoths.Text = "Moths";
             this.radioButtonMoths.UseVisualStyleBackColor = true;
             this.radioButtonMoths.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChange);
             // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonRemove.Location = new System.Drawing.Point(3, 279);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(137, 23);
+            this.buttonRemove.TabIndex = 8;
+            this.buttonRemove.Text = "Remove Selected";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.RemoveItemClicked);
+            // 
             // InputData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 293);
+            this.ClientSize = new System.Drawing.Size(948, 368);
             this.Controls.Add(this.tableLayoutPanelMainMoths);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(596, 332);
+            this.MinimumSize = new System.Drawing.Size(964, 407);
             this.Name = "InputData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Input Data";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HandleFormClosing);
+            this.Text = "Input Abundance Data";
+            this.Resize += new System.EventHandler(this.FormResized);
             this.tableLayoutPanelMainMoths.ResumeLayout(false);
             this.tableLayoutPanelMainMoths.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +299,7 @@
         private System.Windows.Forms.RadioButton radioButtonRodents;
         private System.Windows.Forms.RadioButton radioButtonMoths;
         public System.Windows.Forms.ListView listViewMoths;
+        private System.Windows.Forms.Button buttonReturnEdit;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

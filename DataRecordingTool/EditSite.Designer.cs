@@ -80,7 +80,7 @@
             this.buttonNight.Name = "buttonNight";
             this.buttonNight.Size = new System.Drawing.Size(114, 23);
             this.buttonNight.TabIndex = 18;
-            this.buttonNight.Text = "Input Night Data >>";
+            this.buttonNight.Text = "Add Night Data >>";
             this.buttonNight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonNight.UseVisualStyleBackColor = true;
             this.buttonNight.Click += new System.EventHandler(this.ButtonNightClick);
@@ -566,6 +566,7 @@
             this.buttonSaveSite.Size = new System.Drawing.Size(114, 23);
             this.buttonSaveSite.TabIndex = 17;
             this.buttonSaveSite.Text = "<< Save and Exit";
+            this.buttonSaveSite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSaveSite.UseVisualStyleBackColor = true;
             this.buttonSaveSite.Click += new System.EventHandler(this.ButtonSaveClick);
             // 

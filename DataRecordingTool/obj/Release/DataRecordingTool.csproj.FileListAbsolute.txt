@@ -1,0 +1,17 @@
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\bin\Release\DataRecordingTool.exe.config
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\bin\Release\DataRecordingTool.exe
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\bin\Release\DataRecordingTool.pdb
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\bin\Release\aa\DataRecordingTool.resources.dll
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\MothNet.EditSite.resources
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\MothNet.GetName.resources
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\MothNet.InputData.resources
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\MothNet.NightEdit.resources
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\MothNet.NightForm.resources
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\MothNet.Properties.Resources.resources
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\MothNet.StartForm.resources
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\MothNet.StartForm.aa.resources
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\DataRecordingTool.csproj.GenerateResource.Cache
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\DataRecordingTool.csproj.CoreCompileInputs.cache
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\aa\DataRecordingTool.resources.dll
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\DataRecordingTool.exe
+S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Release\DataRecordingTool.pdb

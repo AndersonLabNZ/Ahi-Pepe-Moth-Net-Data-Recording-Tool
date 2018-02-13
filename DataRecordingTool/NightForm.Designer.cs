@@ -33,8 +33,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonEditSite = new System.Windows.Forms.Button();
+            this.buttonRemove = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -99,18 +99,6 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.AddButtonClick);
             // 
-            // buttonRemove
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.buttonRemove, 2);
-            this.buttonRemove.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRemove.Location = new System.Drawing.Point(3, 410);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(144, 23);
-            this.buttonRemove.TabIndex = 1;
-            this.buttonRemove.Text = "Remove Selected Night";
-            this.buttonRemove.UseVisualStyleBackColor = true;
-            this.buttonRemove.Click += new System.EventHandler(this.RemoveButtonClick);
-            // 
             // buttonEditSite
             // 
             this.buttonEditSite.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -123,6 +111,18 @@
             this.buttonEditSite.UseVisualStyleBackColor = true;
             this.buttonEditSite.Click += new System.EventHandler(this.EditSiteButtonClick);
             // 
+            // buttonRemove
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.buttonRemove, 2);
+            this.buttonRemove.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonRemove.Location = new System.Drawing.Point(3, 410);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(144, 23);
+            this.buttonRemove.TabIndex = 1;
+            this.buttonRemove.Text = "Remove Selected Night";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.RemoveButtonClick);
+            // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -131,6 +131,7 @@
             this.button1.Size = new System.Drawing.Size(114, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Finish and Save >>";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.SaveButtonClick);
             // 
@@ -144,7 +145,6 @@
             this.Name = "NightForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Nights";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HandleFormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -453,9 +453,10 @@
             this.buttonSave.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonSave.Location = new System.Drawing.Point(3, 342);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(120, 23);
+            this.buttonSave.Size = new System.Drawing.Size(114, 23);
             this.buttonSave.TabIndex = 32;
-            this.buttonSave.Text = "Save and Close";
+            this.buttonSave.Text = "<< Save and Close";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.SaveButtonClick);
             // 
@@ -481,12 +482,14 @@
             // buttonSpecies
             // 
             this.buttonSpecies.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonSpecies.Location = new System.Drawing.Point(795, 342);
+            this.buttonSpecies.Location = new System.Drawing.Point(831, 342);
             this.buttonSpecies.Name = "buttonSpecies";
-            this.buttonSpecies.Size = new System.Drawing.Size(150, 23);
+            this.buttonSpecies.Size = new System.Drawing.Size(114, 23);
             this.buttonSpecies.TabIndex = 33;
-            this.buttonSpecies.Text = "Input Species Counts...";
+            this.buttonSpecies.Text = "Add Abundances >>";
+            this.buttonSpecies.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSpecies.UseVisualStyleBackColor = true;
+            this.buttonSpecies.Click += new System.EventHandler(this.ButtonSpeciesCountsClick);
             // 
             // tableLayoutPanelEnnviro
             // 

@@ -1,27 +1,7 @@
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.EditSite.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.EnvironmentalData.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.GetName.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.InputData.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.NightEdit.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.NightForm.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.StartForm.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.StartForm.aa.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\DataRecordingTool.csproj.GenerateResource.Cache
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\DataRecordingTool.csprojResolveAssemblyReference.cache
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\bin\Debug\DataRecordingTool.exe.config
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\bin\Debug\DataRecordingTool.exe
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\bin\Debug\DataRecordingTool.pdb
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\bin\Debug\aa\DataRecordingTool.resources.dll
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\MothNet.Properties.Resources.resources
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\DataRecordingTool.csproj.CoreCompileInputs.cache
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\aa\DataRecordingTool.resources.dll
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\DataRecordingTool.exe
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\DataRecordingTool.pdb
 S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\bin\Debug\DataRecordingTool.exe.config
 S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\bin\Debug\DataRecordingTool.exe
 S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\bin\Debug\DataRecordingTool.pdb
 S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\bin\Debug\aa\DataRecordingTool.resources.dll
-S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Debug\DataRecordingTool.csprojResolveAssemblyReference.cache
 S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Debug\MothNet.EditSite.resources
 S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Debug\MothNet.GetName.resources
 S:\Home\GitHub\Ahi-Pepe-Moth-Net-Data-Recording-Tool\DataRecordingTool\obj\Debug\MothNet.InputData.resources

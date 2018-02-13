@@ -148,7 +148,7 @@ namespace MothNet
                         SettingsStream = new FileStream(DataFileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
                         NameStream = new FileStream(NameFileName, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
                     }
-                    catch (FileNotFoundException except)
+                    catch (IOException except) when (except is DirectoryNotFoundException || except is FileNotFoundException)
                     {
                         throw new CannotLoadException("Could not load settings or name file. The file was not found.", except);
                     }
@@ -229,6 +229,7 @@ namespace MothNet
 
             //Only enable save button if everything OK
             buttonSaveSite.Enabled = success;
+            buttonNight.Enabled = success;
             return success;
         }
 
@@ -398,10 +399,11 @@ namespace MothNet
         /// <summary>
         /// Saves the site data to file
         /// </summary>
-        private void SaveSite()
+        public void SaveSite()
         {
             //Seek to the start of the file streams
             SettingsStream.Seek(0, SeekOrigin.Begin);
+
             NameStream.Seek(0, SeekOrigin.Begin);
 
             //Convert the name to a byte array and write it
@@ -411,6 +413,7 @@ namespace MothNet
             //Flush and reset the file pointer to the start
             NameStream.Flush();
             NameStream.Seek(0, SeekOrigin.Begin);
+            NameStream.SetLength(raw.LongLength);
 
             //Get the resource list for the settings to be appended to
             string[] list = HelperFunctions.GetResourceList("setting_headers_site");
@@ -442,6 +445,7 @@ namespace MothNet
             //Flush and reset the file pointer to the start
             SettingsStream.Flush();
             SettingsStream.Seek(0, SeekOrigin.Begin);
+            SettingsStream.SetLength(bytes.Length);
 
             //Set saving to true, to note that the data has been saved
             Saving = true;
@@ -491,11 +495,7 @@ namespace MothNet
             //If the site is a new site, and the user doesn't want to save it, then just delete it
             if (Creating && !Saving)
             {
-                try
-                {
-                    Directory.Delete(FolderDirectory, true);
-                }
-                catch (DirectoryNotFoundException) { } //Swallow the exception - if the directory doesn't exist when we try to delete it it's hardly an error
+                HelperFunctions.SafeDeleteDirectory(FolderDirectory);
             }
         }
 
@@ -520,16 +520,27 @@ namespace MothNet
 
             //Manually set size and location to "replace" this window
             Nights.StartPosition = FormStartPosition.Manual;
-            Nights.Location = this.Location;
+
             Nights.Size = this.Size;
+            Nights.Location = this.Location;
 
             DialogResult res = Nights.ShowDialog();
-            if (res == DialogResult.OK)
+
+            //Closing without saving
+            if (res == DialogResult.Cancel)
             {
                 this.Close();
             }
-            else
+            else if (res == DialogResult.Yes) //Closing and saving
             {
+                SaveSite();
+                this.Close();
+            }
+            else //Going back
+            {
+                this.Size = Nights.Size;
+                this.Location = Nights.Location;
+
                 this.Show();
             }
         }

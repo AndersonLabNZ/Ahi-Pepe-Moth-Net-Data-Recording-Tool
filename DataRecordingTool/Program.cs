@@ -100,15 +100,15 @@ namespace MothNet
             FileStream openStream = File.Open(origFile, FileMode.Open, FileAccess.Read, FileShare.Read);
             byte[] data = new byte[openStream.Length + 1];
             openStream.Read(data, 0, (int)openStream.Length);
-            openStream.Close();
             Stream.Seek(0, SeekOrigin.Begin);
 
             //Save the file
             Stream.Write(data, 0, (int)openStream.Length);
             Stream.Flush();
-
+            Stream.SetLength(openStream.Length);
             //Note success
             IsAvailable = true;
+            openStream.Close();
         }
 
         /// <summary>
@@ -117,6 +117,7 @@ namespace MothNet
         public void Clear()
         {
             Stream.Seek(0, SeekOrigin.Begin);
+            Stream.SetLength(0);
         }
 
         /// <summary>
@@ -604,7 +605,14 @@ namespace MothNet
             }
             catch (Exception) { } //Swallow exception - doesn't matter (to the user) why it can't be read, just that it can't
 
-            return name ?? "Name unknown";
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return "Name unknown";
+            }
+            else
+            {
+                return name;
+            }
         }
 
         /// <summary>
@@ -615,6 +623,35 @@ namespace MothNet
         public static string GetExceptionUserMessage(CannotLoadException e)
         {
             return e.Message + (e.InnerException == null ? "" : ("\n" + e.InnerException.Message));
+        }
+
+        /// <summary>
+        /// Function for deleting a directory that won't raise exceptions if something predictable happens
+        /// </summary>
+        /// <param name="dir"></param>
+        /// <returns></returns>
+        public static void SafeDeleteDirectory(string dir)
+        {   
+            try
+            {
+                Directory.Delete(dir, true);
+            }
+            catch (DirectoryNotFoundException)
+            {
+                //OK if doesn't exist
+            }
+        }
+
+        public static void SafeDeleteFile(string file)
+        {
+            try
+            {
+                File.Delete(file);
+            }
+            catch (IOException ioex) when (ioex is DirectoryNotFoundException || ioex is FileNotFoundException)
+            {
+                //OK if doesn't exist
+            }
         }
 
         /// <summary>
@@ -632,20 +669,6 @@ namespace MothNet
             else
             {
                 return item.FileValue;
-            }
-        }
-
-        /// <summary>
-        /// Overides the form closing so that it only hides it. Useful if a form is holding handles open, or has data that has to be saved as part of the main form closing
-        /// </summary>
-        /// <param name="sender">The sender</param>
-        /// <param name="e">The event arguments</param>
-        public static void HandleFormClosing(object sender, FormClosingEventArgs e)
-        {
-            ((Form)sender).Hide();
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                e.Cancel = true;
             }
         }
 
@@ -743,6 +766,11 @@ namespace MothNet
 
             //Get data as array of lines
             string[] str = GetFileTextLines(stream);
+
+            if (list.Length + 1 != str.Length)
+            {
+                throw new CannotLoadException(string.Format("Not all settings items in file - got \"{0}\", expected \"{1}\"", str.Length, list.Length));
+            }
 
             foreach (string line in str)
             {
