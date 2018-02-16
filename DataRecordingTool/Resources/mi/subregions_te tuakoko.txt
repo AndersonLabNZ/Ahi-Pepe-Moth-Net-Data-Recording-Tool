@@ -1,0 +1,9 @@
+﻿//The subregions for Te Tuakoko. Partial
+Bay of Plenty (BP)
+Taupo (TO)
+Gisborne (GB)
+Taranaki (TK)
+Hawkes Bay (HB)
+Rangitikei (RI)
+Wairarapa (WA)
+Wellington (WN)

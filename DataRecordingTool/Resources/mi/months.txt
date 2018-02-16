@@ -1,0 +1,13 @@
+﻿//The months of the year in a three letter code
+JAN
+FEB
+MAR
+APR
+MAY
+JUN
+JUL
+AUG
+SEP
+OCT
+NOV
+DEC

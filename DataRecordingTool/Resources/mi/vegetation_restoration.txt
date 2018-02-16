@@ -1,0 +1,22 @@
+﻿//File for the vegetation restoration data
+//might be that this should have been three seperate buttons 
+Planted - less than 1 year old (PL_1)
+Planted - one to 2 year old (PL_2)
+Planted - 2 to 5 year old (PL_5)
+Planted - 5 to 10 year old (PL_10)
+Planted - 10 to 20 year old (PL_20)
+Planted - more than 20 year old (PL_old)
+
+Planted, large herbivore fencing - less than 1 year old (PL_HF1)
+Planted, large herbivore fencing - one to 2 year old (PL_HF2)
+Planted, large herbivore fencing - 2 to 5 year old (PL_HF5)
+Planted, large herbivore fencing - 5 to 10 year old (PL_HF10)
+Planted, large herbivore fencing - 10 to 20 year old (PL_HF20)
+Planted, large herbivore fencing - more than 20 year old (PL__HFold)
+
+Natural regeneration, large herbivore fencing - less than 1 year old (NR_HF1)
+Natural regeneration, large herbivore fencing - one to 2 year old (NR_HF2)
+Natural regeneration, large herbivore fencing - 2 to 5 year old (NR_HF5)
+Natural regeneration, large herbivore fencing - 5 to 10 year old (NR_HF10)
+Natural regeneration, large herbivore fencing - 10 to 20 year old (NR_HF20)
+Natural regeneration, large herbivore fencing - more than 20 year old (NR__HFold)

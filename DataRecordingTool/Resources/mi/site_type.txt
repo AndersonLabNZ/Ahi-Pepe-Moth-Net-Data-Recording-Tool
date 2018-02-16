@@ -1,0 +1,4 @@
+﻿//The type of site
+Vegetation Restoration / Treatment bim (VEG_RES)
+Mature Native Site / Reference (REF)
+Background Site / Control (CON)

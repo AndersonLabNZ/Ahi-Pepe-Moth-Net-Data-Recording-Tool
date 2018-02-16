@@ -1,0 +1,6 @@
+﻿//The subregions for Te Ihu
+Hawkes Bay (HB)
+Rangitikei (RI)
+Whanganui (WI)
+Wairarapa (WA)
+Wellington (WN)

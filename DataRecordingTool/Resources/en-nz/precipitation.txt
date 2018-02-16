@@ -1,4 +1,4 @@
-﻿//The amound of overnight precipitation
+﻿//The amount of overnight precipitation
 None (0)
 Mist (1)
 Drizzle (2)

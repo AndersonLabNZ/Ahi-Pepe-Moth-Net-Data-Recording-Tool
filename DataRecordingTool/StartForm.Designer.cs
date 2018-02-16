@@ -52,8 +52,8 @@
             // pictureBoxImage
             // 
             resources.ApplyResources(this.pictureBoxImage, "pictureBoxImage");
-            this.pictureBoxImage.BackgroundImage = global::MothNet.Properties.Resources.Ahi_Pepe___Resized;
-            this.pictureBoxImage.InitialImage = global::MothNet.Properties.Resources.Ahi_Pepe___Resized;
+            this.pictureBoxImage.BackgroundImage = global::MothNet.Properties.Resources.Ahi_Pepe_Resized;
+            this.pictureBoxImage.InitialImage = global::MothNet.Properties.Resources.Ahi_Pepe_Resized;
             this.pictureBoxImage.Name = "pictureBoxImage";
             this.pictureBoxImage.TabStop = false;
             // 

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
+using System.Resources;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace MothNet
@@ -334,6 +337,22 @@ namespace MothNet
                 return Path.Combine(ParentDir, "Sites");
             }
         }
+
+        /// <summary>
+        /// Not actually a function - but returns the current resource manager
+        /// </summary>
+        public static ResourceManager Resources
+        {
+            get
+            {
+                return resman;
+            }
+        }
+
+        /// <summary>
+        /// The resource manager returned by resources
+        /// </summary>
+        private static ResourceManager resman = new ResourceManager("MothNet.Properties.Resources", typeof(Program).Assembly);
 
         /// <summary>
         /// Creates a new edit site dialog and the associated file system structrues
@@ -680,7 +699,7 @@ namespace MothNet
         public static string[] GetResourceList(string resource)
         {
             //Gets the resource and splits it by line
-            string[] items = ((string)Properties.Resources.ResourceManager.GetObject(resource)).Split('\n');
+            string[] items = ((string)Resources.GetObject(resource, Thread.CurrentThread.CurrentCulture)).Split('\n');
             int length = items.Length;
             List<String> list = new List<string>();
 
@@ -913,6 +932,14 @@ namespace MothNet
         [STAThread]
         static void Main()
         {
+#if ENGLISH
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-NZ");
+#elif MAORI
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("mi");
+#else
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-NZ");
+#endif
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 

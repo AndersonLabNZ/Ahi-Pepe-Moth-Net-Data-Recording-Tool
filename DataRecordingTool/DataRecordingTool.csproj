@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +50,27 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Ahi_Pepe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Maori Release|AnyCPU'">
+    <OutputPath>bin\Maori Release\</OutputPath>
+    <DefineConstants>TRACE;MAORI</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'English Release|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\English Release\</OutputPath>
+    <DefineConstants>TRACE;ENGLISH</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -82,6 +119,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.en-NZ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en-NZ.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.mi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.mi.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,9 +155,17 @@
     <EmbeddedResource Include="NightForm.resx">
       <DependentUpon>NightForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="Properties\Resources.en-NZ.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.en-NZ.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.mi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.mi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.aa.resx">
@@ -136,88 +191,92 @@
     <None Include="Resources\Ahi_Pepe.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\site_type.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\surrounding_vegetation.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\aspect.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\canopy_height.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cloud_cover.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\distance_shrub_tree.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\precipitation.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\regions.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\subregions_te_rauawa.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\subregions_te_tahiwi.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\subregions_te_taurapa.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\predator_removal.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vegetation_restoration.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Ahi Pepe.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ahi Pepe - Resized.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\months.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\alt_light.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\moon_phase.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\setting_headers_site.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\setting_headers_night.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\species_list_erebidae.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\species_list_geometridae.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\species_list_hepialidae.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\species_list_noctuidae.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Ahi_Pepe.ico" />
-    <None Include="Resources\species_list_nolidae.txt" />
-    <None Include="Resources\species_list_saturniidae.txt" />
-    <None Include="Resources\species_list_sphingidae.txt" />
-    <None Include="Resources\subregions_ngā_paihau.txt" />
-    <None Include="Resources\subregions_te tuakoko.txt" />
-    <None Include="Resources\subregions_te_hiku.txt" />
-    <None Include="Resources\subregions_te_hīheru.txt" />
-    <None Include="Resources\subregions_te_ihu.txt" />
-    <None Include="Resources\species_list_rodents.txt" />
+    <None Include="Resources\Ahi_Pepe2.ico" />
+    <None Include="Resources\Ahi Pepe - Resized3.png" />
+    <None Include="Resources\mi\distance_shrub_tree.txt" />
+    <None Include="Resources\mi\cloud_cover.txt" />
+    <None Include="Resources\mi\canopy_height.txt" />
+    <None Include="Resources\mi\aspect.txt" />
+    <None Include="Resources\mi\alt_light.txt" />
+    <None Include="Resources\mi\vegetation_restoration.txt" />
+    <None Include="Resources\mi\surrounding_vegetation.txt" />
+    <None Include="Resources\mi\subregions_te_taurapa.txt" />
+    <None Include="Resources\mi\subregions_te_tahiwi.txt" />
+    <None Include="Resources\mi\subregions_te_rauawa.txt" />
+    <None Include="Resources\mi\subregions_te_ihu.txt" />
+    <None Include="Resources\mi\subregions_te_hiku.txt" />
+    <None Include="Resources\mi\subregions_te_hīheru.txt" />
+    <None Include="Resources\mi\subregions_te tuakoko.txt" />
+    <None Include="Resources\mi\subregions_ngā_paihau.txt" />
+    <None Include="Resources\mi\species_list_sphingidae.txt" />
+    <None Include="Resources\mi\species_list_saturniidae.txt" />
+    <None Include="Resources\mi\species_list_rodents.txt" />
+    <None Include="Resources\mi\species_list_nolidae.txt" />
+    <None Include="Resources\mi\species_list_noctuidae.txt" />
+    <None Include="Resources\mi\species_list_hepialidae.txt" />
+    <None Include="Resources\mi\species_list_geometridae.txt" />
+    <None Include="Resources\mi\species_list_erebidae.txt" />
+    <None Include="Resources\mi\site_type.txt" />
+    <None Include="Resources\mi\setting_headers_site.txt" />
+    <None Include="Resources\mi\setting_headers_night.txt" />
+    <None Include="Resources\mi\regions.txt" />
+    <None Include="Resources\mi\predator_removal.txt" />
+    <None Include="Resources\mi\precipitation.txt" />
+    <None Include="Resources\mi\moon_phase.txt" />
+    <None Include="Resources\mi\months.txt" />
+    <None Include="Resources\Ahi_Pepe1.ico" />
+    <None Include="Resources\Ahi Pepe - Resized2.png" />
+    <None Include="Resources\Ahi Pepe - Resized1.png" />
+    <None Include="Resources\en-nz\months.txt" />
+    <None Include="Resources\en-nz\distance_shrub_tree.txt" />
+    <None Include="Resources\en-nz\cloud_cover.txt" />
+    <None Include="Resources\en-nz\canopy_height.txt" />
+    <None Include="Resources\en-nz\aspect.txt" />
+    <None Include="Resources\en-nz\alt_light.txt" />
+    <None Include="Resources\en-nz\vegetation_restoration.txt" />
+    <None Include="Resources\en-nz\surrounding_vegetation.txt" />
+    <None Include="Resources\en-nz\subregions_te_taurapa.txt" />
+    <None Include="Resources\en-nz\subregions_te_tahiwi.txt" />
+    <None Include="Resources\en-nz\subregions_te_rauawa.txt" />
+    <None Include="Resources\en-nz\subregions_te_ihu.txt" />
+    <None Include="Resources\en-nz\subregions_te_hiku.txt" />
+    <None Include="Resources\en-nz\subregions_te_hīheru.txt" />
+    <None Include="Resources\en-nz\subregions_te tuakoko.txt" />
+    <None Include="Resources\en-nz\subregions_ngā_paihau.txt" />
+    <None Include="Resources\en-nz\species_list_sphingidae.txt" />
+    <None Include="Resources\en-nz\species_list_saturniidae.txt" />
+    <None Include="Resources\en-nz\species_list_rodents.txt" />
+    <None Include="Resources\en-nz\species_list_nolidae.txt" />
+    <None Include="Resources\en-nz\species_list_noctuidae.txt" />
+    <None Include="Resources\en-nz\species_list_hepialidae.txt" />
+    <None Include="Resources\en-nz\species_list_geometridae.txt" />
+    <None Include="Resources\en-nz\species_list_erebidae.txt" />
+    <None Include="Resources\en-nz\site_type.txt" />
+    <None Include="Resources\en-nz\setting_headers_site.txt" />
+    <None Include="Resources\en-nz\setting_headers_night.txt" />
+    <None Include="Resources\en-nz\regions.txt" />
+    <None Include="Resources\en-nz\predator_removal.txt" />
+    <None Include="Resources\en-nz\precipitation.txt" />
+    <None Include="Resources\en-nz\moon_phase.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

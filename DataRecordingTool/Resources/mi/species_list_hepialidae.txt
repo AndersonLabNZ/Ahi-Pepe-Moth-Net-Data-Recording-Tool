@@ -1,0 +1,13 @@
+﻿ABCD,Aenetus virescens
+C,Dumbletonius characterifer
+ABD,Dumbletonius unimaculatus
+BCD,Wiseana cervinata
+G,Aoraia aurimaculata
+H,Aoraia dinodes
+CE,Aoraia enysii
+H,Aoraia rufivena
+EGH,Cladoxycanus minos
+H,Heloxycanus patricki
+EFGH,Wiseana copularis
+ABDF,Wiseana signata
+BDEFGH,Wiseana umbraculata

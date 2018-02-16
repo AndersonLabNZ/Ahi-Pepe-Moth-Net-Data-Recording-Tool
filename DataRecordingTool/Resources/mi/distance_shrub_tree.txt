@@ -1,0 +1,11 @@
+﻿//The distance to the nearest form of shrub or tree
+Under canopy (0)
+Overhanging (1)
+Right next to - <1m (2)
+Approx. five paces - <5m (3)
+Approx. length of a red London bus - <10m (4)
+Approx. length of a cricket pitch - <20m (5)
+Approx. lenth of an olympic swimming pool - <50m (6)
+Approx. length of a hockey field - <100m (7)
+Approx. length of the Hindenburg Zeppelin - <250m (8)
+Further (9)

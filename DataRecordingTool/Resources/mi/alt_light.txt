@@ -1,0 +1,12 @@
+﻿//Data for the alternate light sources
+No artificial light (NONE)
+Scattered house lights - mainly orange (HOUSE_LOW)
+Scattered house lights - mainly orange (HOUSE_LOW)
+Dense housing lights - mainly orange (HOUSE_HIGH)
+Dense urban area - multicoloured lights (URBAN)
+Street lights - orange (HPNa)
+Street lights - White (LEDwh)
+Street lights - blue (LEDbl)
+Street lights - amber (LEDam)
+Large white warehouse or sportsfield lights (LR_HAL)
+House lights - mainly orange (HOUSE)

@@ -1,0 +1,7 @@
+﻿Mus musculus
+Rattus exulans
+Rattus rattus
+Rattus norvegicus
+Erinaceus europaeus occidentalis
+Trichosurus vulpecula
+Mustela erminea

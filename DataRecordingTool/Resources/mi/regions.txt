@@ -1,0 +1,9 @@
+﻿//The list of regions
+Te Hiku (A)
+Ngā Paihau (B)
+Te Tuakoko (C)
+Te Ihu (D)
+Te Tahiwi (E)
+Te Rauawa (F)
+Te Hīheru (G)
+Te Taurapa (H)
