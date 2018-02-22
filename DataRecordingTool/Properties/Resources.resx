@@ -119,9 +119,48 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Ahi_Pepe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ahi_Pepe2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\Ahi_Pepe.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ahi_Pepe_Resized" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ahi Pepe - Resized3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\Ahi Pepe - Resized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aspect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aspect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="months" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\months.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="regions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\regions.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="setting_headers_night" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\setting_headers_night.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="setting_headers_site" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\setting_headers_site.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="species_list_erebidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\species_list_erebidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="species_list_geometridae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\species_list_geometridae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="species_list_hepialidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\species_list_hepialidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="species_list_noctuidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\species_list_noctuidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="species_list_nolidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\species_list_nolidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="species_list_rodents" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\species_list_rodents.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="species_list_saturniidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\species_list_saturniidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="species_list_sphingidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\species_list_sphingidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

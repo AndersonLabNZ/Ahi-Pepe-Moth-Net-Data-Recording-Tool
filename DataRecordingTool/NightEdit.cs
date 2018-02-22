@@ -156,7 +156,7 @@ namespace MothNet
                     }
                     catch (IOException except) when(except is DirectoryNotFoundException || except is FileNotFoundException)
                     {
-                        throw new CannotLoadException("Could not load settings or name file. The file was not found.", except);
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_FILE_NOT_FOUND"), except);
                     }
                 }
 
@@ -171,7 +171,7 @@ namespace MothNet
                 {
                     if (!creating)
                     {
-                        throw new CannotLoadException("Could not load settings or name file. The file was not found.", except);
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_FILE_NOT_FOUND"), except);
                     }
                     else
                     {
@@ -218,7 +218,7 @@ namespace MothNet
                     }
                     catch (Exception)
                     {
-                        throw new CannotLoadException("The date format for the night is invalid");
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_DATE_FORMAT"));
                     } 
                     break;
                 case 2:
@@ -235,7 +235,7 @@ namespace MothNet
                     }
                     else
                     {
-                        throw new CannotLoadException("The sunset time was not an integer - got \"" + value + "\" instead");
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_SUNSET_NOT_INT", value));
                     }
                     break;
                 case 4:
@@ -247,14 +247,14 @@ namespace MothNet
                     }
                     else
                     {
-                        throw new CannotLoadException("The sunrise time was not an integer - got \"" + value + "\" instead");
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_SUNRISE_NOT_INT", value));
                     }
                     break;
                 case 5:
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxMoonPhase, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for moon phase", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_MOON_PHASE", value));
                     }
                     break;
                 case 6:
@@ -287,7 +287,7 @@ namespace MothNet
                         //If it is not found then throw
                         if (!hit)
                         {
-                            throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for an alternate light source", value));
+                            throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_ALT_LIGHT", value));
                         }
                     }
                     break;
@@ -299,14 +299,14 @@ namespace MothNet
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxCloud, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for cloud cover", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_CLOUD", value));
                     }
                     break;
                 case 9:
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxPrecipitation, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for precipitation", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_PRECIP", value));
                     }
                     break;
                 case 10:
@@ -431,7 +431,7 @@ namespace MothNet
                         //If not a valid combo box value then throw the exception
                         if (!HelperFunctions.SetComboBoxFileValue(comboBoxWindDir, value))
                         {
-                            throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for wind direction", value));
+                            throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_WIND_DIR", value));
                         }
                     }
                     break;

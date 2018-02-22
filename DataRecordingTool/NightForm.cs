@@ -61,7 +61,7 @@ namespace MothNet
             GuidItem item = (GuidItem)listBoxNights.Items[listBoxNights.SelectedIndex];
 
             //Check if user actually wants to delete the night
-            if (MessageBox.Show("Are you sure you want to remove the night data for this night?\n" + item.Name, "Are you sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_CONF_DELETE_NIGHT", item.Name), HelperFunctions.FormatResStr("MSG_TITLE_CONF_ACT"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -91,7 +91,7 @@ namespace MothNet
             }
             catch (CannotLoadException except)
             {
-                MessageBox.Show(HelperFunctions.GetExceptionUserMessage(except), "Could Not Create Night Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_CREATE_NIGHT_FAIL", HelperFunctions.GetExceptionUserMessage(except)), HelperFunctions.FormatResStr("MSG_TITLE_CREATE_NIGHT_FAIL"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -128,7 +128,7 @@ namespace MothNet
                 }
                 catch (CannotLoadException except)
                 {
-                    MessageBox.Show(HelperFunctions.GetExceptionUserMessage(except), "Could Not Load Night Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_OPEN_NIGHT_FAIL", HelperFunctions.GetExceptionUserMessage(except)), HelperFunctions.FormatResStr("MSG_TITLE_OPEN_NIGHT_FAIL"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -169,14 +169,14 @@ namespace MothNet
                     NightEdit right = (NightEdit)listBoxNights.Items[j];
                     if (left.dateTimePickerDate.Value.Date == right.dateTimePickerDate.Value.Date)
                     {
-                        MessageBox.Show("Some nights have the same date - each night should be unique", "Duplicate Nights", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_CHECK_DUP_NIGHT", left.NightID), HelperFunctions.FormatResStr("MSG_TITLE_CHECK_DUP_NIGHT"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
             }
 
             //Check if the user want's to export the data to a zip file
-            if (MessageBox.Show("Do you want to export the data?", "Export Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_CHECK_EXPORT"), HelperFunctions.FormatResStr("MSG_TITLE_CHECK_EXPORT"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //Create a save file dialog. only allow zip files
                 SaveFileDialog dialog = new SaveFileDialog
@@ -228,7 +228,7 @@ namespace MothNet
                 }
                 catch (FileNotFoundException except)
                 {
-                    MessageBox.Show("Could not copy data - " + except.Message, "Unable to Export Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_EXPORT_FAIL", except.Message), HelperFunctions.FormatResStr("MSG_TITLE_EXPORT_FAIL"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     HelperFunctions.SafeDeleteDirectory(tempDir);
 

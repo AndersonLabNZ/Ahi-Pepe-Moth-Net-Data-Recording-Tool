@@ -119,20 +119,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.en-NZ.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.en-NZ.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.mi.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.mi.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.en-NZ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en-NZ.resx</DependentUpon>
     </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
@@ -156,20 +151,21 @@
       <DependentUpon>NightForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.en-NZ.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.en-NZ.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.mi.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.mi.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.mi.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartForm.aa.resx">
+    <EmbeddedResource Include="StartForm.en-NZ.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.mi.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
@@ -198,8 +194,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ahi_Pepe.ico" />
-    <None Include="Resources\Ahi_Pepe2.ico" />
-    <None Include="Resources\Ahi Pepe - Resized3.png" />
+    <None Include="Resources\species_list_sphingidae.txt" />
+    <None Include="Resources\species_list_saturniidae.txt" />
+    <None Include="Resources\species_list_rodents.txt" />
+    <None Include="Resources\species_list_nolidae.txt" />
+    <None Include="Resources\species_list_noctuidae.txt" />
+    <None Include="Resources\species_list_hepialidae.txt" />
+    <None Include="Resources\species_list_geometridae.txt" />
+    <None Include="Resources\species_list_erebidae.txt" />
+    <None Include="Resources\setting_headers_site.txt" />
+    <None Include="Resources\setting_headers_night.txt" />
+    <None Include="Resources\regions.txt" />
+    <None Include="Resources\months.txt" />
+    <None Include="Resources\aspect.txt" />
     <None Include="Resources\mi\distance_shrub_tree.txt" />
     <None Include="Resources\mi\cloud_cover.txt" />
     <None Include="Resources\mi\canopy_height.txt" />
@@ -231,9 +238,6 @@
     <None Include="Resources\mi\precipitation.txt" />
     <None Include="Resources\mi\moon_phase.txt" />
     <None Include="Resources\mi\months.txt" />
-    <None Include="Resources\Ahi_Pepe1.ico" />
-    <None Include="Resources\Ahi Pepe - Resized2.png" />
-    <None Include="Resources\Ahi Pepe - Resized1.png" />
     <None Include="Resources\en-nz\months.txt" />
     <None Include="Resources\en-nz\distance_shrub_tree.txt" />
     <None Include="Resources\en-nz\cloud_cover.txt" />

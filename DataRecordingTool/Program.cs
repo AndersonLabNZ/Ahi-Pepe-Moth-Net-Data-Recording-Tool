@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Resources;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -265,7 +266,7 @@ namespace MothNet
         }
 
         /// <summary>
-        /// Effectily undoes the line ctor operation, if showFileValueCombobox is true. Otherwhise simple returns the human readable value
+        /// Effectily undoes the line ctor operation, if showFileValueCombobox is true. Otherwhise simply returns the human readable value
         /// </summary>
         /// <returns>A string representation of the combo box item</returns>
         public override string ToString()
@@ -353,6 +354,17 @@ namespace MothNet
         /// The resource manager returned by resources
         /// </summary>
         private static ResourceManager resman = new ResourceManager("MothNet.Properties.Resources", typeof(Program).Assembly);
+
+        /// <summary>
+        /// Retreives a localisable resource string
+        /// </summary>
+        /// <param name="resStrID">The resource name</param>
+        /// <param name="args">Any args that need to be provided if the resource string is a format string</param>
+        /// <returns>The formatted string</returns>
+        public static string FormatResStr(string resStrID, params object[] args)
+        {
+            return string.Format(resman.GetString(resStrID), args);
+        }
 
         /// <summary>
         /// Creates a new edit site dialog and the associated file system structrues
@@ -563,6 +575,39 @@ namespace MothNet
         }
         
         /// <summary>
+        /// Gets the region name from the specified ID
+        /// </summary>
+        /// <param name="id">The region ID</param>
+        /// <returns>The full region name</returns>
+        public static string GetRegionFromID(char id)
+        {
+            //Split by region
+            string[] list = GetResourceList("regions");
+            
+            //Iterate through each item
+            foreach (string line in list)
+            {
+                //Ignore if empty or commented
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//"))
+                {
+                    continue;
+                }
+
+                //Substring the bit between the brackets
+                int start = line.IndexOf('(') + 1;
+                string match = line.Substring(start, line.IndexOf(')') - start);
+
+                //Check the match
+                if (match == id.ToString())
+                {
+                    //If so, return the region name only
+                    return line.Substring(0, start - 3);
+                }
+            }
+            throw new ArgumentOutOfRangeException(nameof(id), "No region matches the specified ID");
+        }
+
+        /// <summary>
         /// Geths the index of where the value in data is in the combo box box.
         /// </summary>
         /// <param name="box">The combo box to check</param>
@@ -626,7 +671,7 @@ namespace MothNet
 
             if (string.IsNullOrWhiteSpace(name))
             {
-                return "Name unknown";
+                return FormatResStr("STR_NAME_UNKNOWN");
             }
             else
             {
@@ -641,14 +686,20 @@ namespace MothNet
         /// <returns>A user message</returns>
         public static string GetExceptionUserMessage(CannotLoadException e)
         {
-            return e.Message + (e.InnerException == null ? "" : ("\n" + e.InnerException.Message));
+            if (e.InnerException == null)
+            {
+                return e.Message;
+            }
+            else
+            {
+                return FormatResStr("STR_EXCEPT_INNER_EXCEPT", e.Message, e.InnerException.Message);
+            }
         }
 
         /// <summary>
-        /// Function for deleting a directory that won't raise exceptions if something predictable happens
+        /// Function for deleting a directory that won't raise exceptions if something normal happens
         /// </summary>
-        /// <param name="dir"></param>
-        /// <returns></returns>
+        /// <param name="dir">The directory to delete</param>
         public static void SafeDeleteDirectory(string dir)
         {   
             try
@@ -661,6 +712,10 @@ namespace MothNet
             }
         }
 
+        /// <summary>
+        /// Function for deleting a directory that won't raise exceptions if something normal happens
+        /// </summary>
+        /// <param name="file">The file to delete</param>
         public static void SafeDeleteFile(string file)
         {
             try
@@ -761,11 +816,13 @@ namespace MothNet
             //Get data as array of lines
             string[] str = GetFileTextLines(stream);
 
+            int index = 0;
 
             //Iterate through each line
             foreach (string line in str)
             {
-                callback(-1, line);
+                callback(index, line);
+                index++;
             }
         }
 
@@ -788,7 +845,7 @@ namespace MothNet
 
             if (list.Length + 1 != str.Length)
             {
-                throw new CannotLoadException(string.Format("Not all settings items in file - got \"{0}\", expected \"{1}\"", str.Length, list.Length));
+                throw new CannotLoadException(FormatResStr("EXCEPT_SET_TOO_FEW", str.Length, list.Length));
             }
 
             foreach (string line in str)
@@ -813,7 +870,7 @@ namespace MothNet
                 }
                 else
                 {
-                    throw new CannotLoadException(string.Format("Unexpected settings header - got \"{0}\", expected \"{1}\"", commaDelineated[0], list[lineIndex]));
+                    throw new CannotLoadException(FormatResStr("EXCEPT_SET_NOT_ON_LIST", commaDelineated[0], list[lineIndex]));
                 }
                 //Only increment the line index if the line wasn't blank. This is to ensure that the settings file - which may contain empty lines for formatting doesn't desynchronise from the resource file
                 lineIndex++;
@@ -933,10 +990,13 @@ namespace MothNet
         static void Main()
         {
 #if ENGLISH
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-NZ");
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-NZ");
 #elif MAORI
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("mi");
             Thread.CurrentThread.CurrentCulture = new CultureInfo("mi");
 #else
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-NZ");
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-NZ");
 #endif
 

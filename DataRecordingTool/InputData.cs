@@ -65,7 +65,7 @@ namespace MothNet
                 }
                 catch (IOException except) when ((except is DirectoryNotFoundException || except is FileNotFoundException) && !create)
                 {
-                    throw new CannotLoadException("Could not moth or rodent file. The file was not found.", except);
+                    throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_ABUNDANCE_FILE"), except);
                 }
 
                 //Load the resource files
@@ -269,7 +269,7 @@ namespace MothNet
         public void SaveAbundances()
         {
             //If both save without the user cancelling, then hide the form
-            if (Moths.Save(GetSpeciesList(prevRegion, "Moths")) && Rodents.Save(GetSpeciesList(prevRegion, "Rodents")))
+            if (Moths.Save(GetSpeciesList(prevRegion, "Moths"), HelperFunctions.GetRegionFromID(prevRegion)) && Rodents.Save(GetSpeciesList(prevRegion, "Rodents"), HelperFunctions.GetRegionFromID(prevRegion)))
             {
                 //Yes means saving and closing
                 this.DialogResult = DialogResult.Yes;
@@ -290,7 +290,7 @@ namespace MothNet
                 //If the selected index is -1, then the user has added something not on the list. Prompt the user to make sure this is intended
                 if (comboBoxSpecies.SelectedIndex == -1)
                 {
-                    if (MessageBox.Show("Are you sure you want to enter a species that is not on the list?", "Species Not on List", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    if (MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_ADD_SP_NOT_LIST", comboBoxSpecies.Text, HelperFunctions.GetRegionFromID(prevRegion)), HelperFunctions.FormatResStr("MSG_TITLE_ADD_SP_NOT_LIST"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                     {
                         return;
                     }
@@ -461,12 +461,14 @@ namespace MothNet
             if (list.Count != 4)
             {
                 //There don't have to be any species - but if there are they should be in the correct format
-                throw new CannotLoadException(string.Format("Expected four columns for species data - but got {0} instead", list.Count));
+                throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_ABUND_COLUMN", 4, list.Count, index));
             }
             else if (!Int32.TryParse(list[3], out int count))
             {
                 //The 4th item should be an integer, as it is the abundance
-                throw new CannotLoadException(string.Format("Expected an integer for the amount but got \"{0}\" instaed", list[3]));
+                throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_NIGHT_ABUNDANCE_NOT_INT", list[3]));
+
+
             }
             else
             {
@@ -557,12 +559,13 @@ namespace MothNet
         /// <summary>
         /// Saves the abundance data to file
         /// </summary>
-        /// <param name="validSpecies"></param>
+        /// <param name="validSpecies">A list of all the valid species</param>
+        /// <param name="region">The region</param>
         /// <returns>Wether the save completed without the user cancelling</returns>
-        public bool Save(string[] validSpecies)
+        public bool Save(string[] validSpecies, string region)
         {
             //Iterate through each item
-            foreach (ListViewItem iten in Items)
+            foreach (ListViewItem item in Items)
             {
                 //Make sure not unrecognised species have been added
                 bool ok = false;
@@ -571,7 +574,7 @@ namespace MothNet
                 foreach (string valid in validSpecies)
                 {
                     //If there is a match, all is ok
-                    if (iten.SubItems[0].Text == valid)
+                    if (item.SubItems[0].Text == valid)
                     {
                         ok = true;
                         break;
@@ -581,7 +584,7 @@ namespace MothNet
                 //If not, prompt the user
                 if (!ok)
                 {
-                    if (MessageBox.Show("Some " + m_name + " species (e.g. " + iten.SubItems[0].Text + ") have been input that are not in the list provided.\nDo you want to continue?", "Invalid Species", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    if (MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_CHECK_SP_NOT_LIST", item.SubItems[0].Text, region), HelperFunctions.FormatResStr("MSG_TITLE_CHECK_SP_NOT_LIST"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         //If this is intentional, then skip all validity checking
                         break;
@@ -596,7 +599,7 @@ namespace MothNet
             //Check for duplicates. If this is ok, then continue
             if (!CheckDuplicate())
             {
-                if (MessageBox.Show("There is some duplicate data for the " + m_name + " abudances.\r\nDo you want to continue?", "Duplicate Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                if (MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_CHECK_DUP_SP"), HelperFunctions.FormatResStr("MSG_TITLE_CHECK_DUP_SP"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
                     return false;
                 }

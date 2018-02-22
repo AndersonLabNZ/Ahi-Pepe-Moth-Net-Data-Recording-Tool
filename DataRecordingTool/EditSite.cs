@@ -150,7 +150,7 @@ namespace MothNet
                     }
                     catch (IOException except) when (except is DirectoryNotFoundException || except is FileNotFoundException)
                     {
-                        throw new CannotLoadException("Could not load settings or name file. The file was not found.", except);
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_FILE_NOT_FOUND"), except);
                     }
 
                     //Load the data into the fields
@@ -253,7 +253,17 @@ namespace MothNet
             //Don't show the message / update list if there are no nights with data anyway
             if (Nights.listBoxNights.Items.Count  > 0 && MothRegion != prevRegion)
             {
-                if (MessageBox.Show("Updating the selected region also updates the active species list for the species count data.\nChanging the region may invalidate this data.\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                string prevRegionFull = string.Empty;
+                foreach (ComboBoxItem item in comboBoxRegions.Items)
+                {
+                    if (item.FileValue[0] == prevRegion)
+                    {
+                        prevRegionFull = item.Value;
+                        break;
+                    }
+                }
+
+                if (MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_SP_LIST_UPDATE_REGION", prevRegionFull, ((ComboBoxItem)comboBoxRegions.Items[comboBoxRegions.SelectedIndex]).Value), HelperFunctions.FormatResStr("MSG_TITLE_SP_LIST_UPDATE_REGION"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     //If desired, update the nights
                     foreach (NightEdit edit in Nights.listBoxNights.Items)
@@ -300,7 +310,7 @@ namespace MothNet
                     //Checks that the combobox has the particular value to add, and if so, loads it.
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxSiteType, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for site type", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_TYPE", value));
                     }
                     break;
                 case 3:
@@ -311,21 +321,21 @@ namespace MothNet
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxVegetationRestoration, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for the level of vegetation restoration", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_VEG_RES", value));
                     }
                     break;
                 case 5:
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxPredatorRemoval, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for the level of predator removal", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_PRED_REMOVE", value));
                     }
                     break;
                 case 6:
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxRegions, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for region", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_REGION", value));
                     }
                     UpdateSubRegions();
                     break;
@@ -333,7 +343,7 @@ namespace MothNet
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxSubRegions, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for subregion", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_DISTRICT", value));
                     }
                     break;
                 case 8:
@@ -360,28 +370,28 @@ namespace MothNet
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxAspect, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for the slope aspect", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_SLOPE_ASPECT", value));
                     }
                     break;
                 case 14:
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxSurroundingVegetation, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for surrounding vegetation", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_SURROUNDING_VEG", value));
                     }
                     break;
                 case 15:
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxCanopyHeight, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for canopy height", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_CANOPY_HEIGHT", value));
                     }
                     break;
                 case 16:
                     //Checks that the combobox has the particular value to add, and if so, loads it
                     if (!HelperFunctions.SetComboBoxFileValue(comboBoxShrubDistance, value))
                     {
-                        throw new CannotLoadException(string.Format("Settings item \"{0}\" not an option for shrub distance", value));
+                        throw new CannotLoadException(HelperFunctions.FormatResStr("EXCEPT_SET_SITE_SHRUB_DIST", value));
                     }
                     break;
             }

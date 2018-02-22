@@ -38,4 +38,3 @@ C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecord
 C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\aa\DataRecordingTool.resources.dll
 C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\DataRecordingTool.exe
 C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\DataRecordingTool.pdb
-C:\Users\whitb\Documents\GitHub\Ahi Pepe Moth Net Data Recording Tool\DataRecordingTool\obj\Debug\DataRecordingTool.csprojResolveAssemblyReference.cache

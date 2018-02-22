@@ -33,7 +33,7 @@ namespace MothNet
             }
             catch (CannotLoadException except)
             {
-                MessageBox.Show(HelperFunctions.GetExceptionUserMessage(except), "Cannot Create Site", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_CREATE_SITE_FAIL", HelperFunctions.GetExceptionUserMessage(except)), HelperFunctions.FormatResStr("MSG_TITLE_CREATE_SITE_FAIL"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

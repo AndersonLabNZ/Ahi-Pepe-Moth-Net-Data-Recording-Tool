@@ -79,5 +79,276 @@ namespace MothNet.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The different directions for aspect (and wind speed)
+        ///Flat
+        ///N
+        ///NNE
+        ///NE
+        ///ENE
+        ///E
+        ///ESE
+        ///SE
+        ///SSE
+        ///S
+        ///SSW
+        ///SW
+        ///WSW
+        ///W
+        ///WNW
+        ///NW
+        ///NNW
+        ///.
+        /// </summary>
+        internal static string aspect {
+            get {
+                return ResourceManager.GetString("aspect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The months of the year in a three letter code
+        ///JAN
+        ///FEB
+        ///MAR
+        ///APR
+        ///MAY
+        ///JUN
+        ///JUL
+        ///AUG
+        ///SEP
+        ///OCT
+        ///NOV
+        ///DEC
+        ///.
+        /// </summary>
+        internal static string months {
+            get {
+                return ResourceManager.GetString("months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The list of regions
+        ///Te Hiku (A)
+        ///Ngā Paihau (B)
+        ///Te Tuakoko (C)
+        ///Te Ihu (D)
+        ///Te Tahiwi (E)
+        ///Te Rauawa (F)
+        ///Te Hīheru (G)
+        ///Te Taurapa (H)
+        ///.
+        /// </summary>
+        internal static string regions {
+            get {
+                return ResourceManager.GetString("regions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The settings file headers for the night data
+        ///SITE_NAME
+        ///NIGHT_DATE
+        ///SITENIGHT_ID
+        ///SUNSET
+        ///SUNRISE
+        ///MOON_PHASE
+        ///OTHER_LIGHT_SOURCE
+        ///DIST_TO_ARTIFICIAL_LIGHT_SOURCE
+        ///CLOUD_COVER
+        ///PRECIPITATION_OVERNIGHT
+        ///KESTRAL_SREIAL
+        ///IBUTTON_TAG
+        ///AVG_AIR_TEMP_DEGC
+        ///MIN_AIR_TEMP_DEGC
+        ///MAX_AIR_TEMP_DEGC
+        ///AVG_REL_HUMIDITY_PERCENT
+        ///MIN_REL_HUMIDITY_PERCENT
+        ///MAX_REL_HUMIDITY_PERCENT
+        ///AVG_WIND_SPEED_MS
+        ///MIN_WIND_SPEED_MS
+        ///MAX_WIND_SPEED_MS
+        ///AVG_AIR_PRESSURE_MB
+        ///MIN_AIR_PRESSURE_MB
+        ///MAX_AIR_PRESSURE_MB
+        ///WIND_DIRECTION
+        ///.
+        /// </summary>
+        internal static string setting_headers_night {
+            get {
+                return ResourceManager.GetString("setting_headers_night", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //The settings file headers for the night data
+        ///SCHOOL_GROUP
+        ///LOCATION
+        ///SITE_TYPE
+        ///SITE_NAME
+        ///VEG_RES_REGIME
+        ///PREDATOR_REMOVAL_REGIME
+        ///REGION
+        ///SUB_REGION
+        ///LAT_DECDEG
+        ///LONG_DECDEG
+        ///ACCURACY_M
+        ///ALTITUDE_M
+        ///SLOPE_DEG
+        ///ASPECT
+        ///SURROUNDING_VEG
+        ///HEIGHT_OF_SURROUNDING_VEG_M
+        ///DISTANCE_TO_NEAREST_SHRUB_M
+        ///.
+        /// </summary>
+        internal static string setting_headers_site {
+            get {
+                return ResourceManager.GetString("setting_headers_site", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A,Dasypodia cymatodes
+        ///A,Pantydia sparsa
+        ///BCD,Trigonistis anticlina
+        ///ABCDEFH,Rhapsa scotosialis 
+        ///ABDEFH,Schrankia costaestrigalis 
+        ///.
+        /// </summary>
+        internal static string species_list_erebidae {
+            get {
+                return ResourceManager.GetString("species_list_erebidae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AC,Chalastra aristarcha
+        ///D,Chalastra ochre
+        ///ABCDE,Chalastra pellurgata 
+        ///ABCDEF,Cleora scriptaria 
+        ///ABC,Declana atronivea
+        ///FH,Declana egregia 
+        ///BCH,Declana feredayi 
+        ///ABCDEFGH,Declana floccosa
+        ///BEFGH,Declana griseata 
+        ///ABCE,Declana hermione 
+        ///ABCDEFGH,Declana junctilinea 
+        ///ABCDEFGH,Declana leptomera 
+        ///DFH,Declana niveata
+        ///C,Declana toreuta
+        ///C,Declana sp. A
+        ///ABDEF,Gellonia dejectaria 
+        ///ABCDEF,Gellonia pannularia 
+        ///BCDEFH,Ischalis fortinata 
+        ///ABCDE,Ischalis gallaria 
+        ///ABCDE,Ischalis nelsonaria 
+        ///ABCDE,Ischali [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string species_list_geometridae {
+            get {
+                return ResourceManager.GetString("species_list_geometridae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ABCD,Aenetus virescens
+        ///C,Dumbletonius characterifer
+        ///ABD,Dumbletonius unimaculatus
+        ///BCD,Wiseana cervinata
+        ///G,Aoraia aurimaculata
+        ///H,Aoraia dinodes
+        ///CE,Aoraia enysii
+        ///H,Aoraia rufivena
+        ///EGH,Cladoxycanus minos
+        ///H,Heloxycanus patricki
+        ///EFGH,Wiseana copularis
+        ///ABDF,Wiseana signata
+        ///BDEFGH,Wiseana umbraculata
+        ///.
+        /// </summary>
+        internal static string species_list_hepialidae {
+            get {
+                return ResourceManager.GetString("species_list_hepialidae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ABCFGH,Bityla defigurata
+        ///FG,Bityla sericea
+        ///ABDFGH,Helicoverpa armigera
+        ///FG,Agrotis admirationis
+        ///ABD,Agrotis innominata
+        ///F,Agrotis innominata complex
+        ///G,Agrotis infusa
+        ///ABCDEFGH,Agrotis ipsilon
+        ///A,Agrotis munda
+        ///EFGH,Aletia cuneata
+        ///C,Aletia dentata
+        ///G,Aletia falsidica
+        ///FG,Aletia mitis
+        ///BCDEFGH,Aletia moderata
+        ///G,Aletia nobilia
+        ///BCEFG,Aletia virescens
+        ///G, Aletia sollennis
+        ///ACFGH,Austramathes fortis
+        ///ACF,Austramathes purpurea
+        ///A,Cosmodes elegans
+        ///ABCDH,Diarsia intermixta
+        ///BCDEH,Dipaustica epiastra
+        ///F,Ectop [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string species_list_noctuidae {
+            get {
+                return ResourceManager.GetString("species_list_noctuidae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A,Uraba lugens
+        ///.
+        /// </summary>
+        internal static string species_list_nolidae {
+            get {
+                return ResourceManager.GetString("species_list_nolidae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mus musculus
+        ///Rattus exulans
+        ///Rattus rattus
+        ///Rattus norvegicus
+        ///Erinaceus europaeus occidentalis
+        ///Trichosurus vulpecula
+        ///Mustela erminea
+        ///.
+        /// </summary>
+        internal static string species_list_rodents {
+            get {
+                return ResourceManager.GetString("species_list_rodents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AD,Opodiphthera eucalypti
+        ///.
+        /// </summary>
+        internal static string species_list_saturniidae {
+            get {
+                return ResourceManager.GetString("species_list_saturniidae", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AC,Agrius convolvuli
+        ///.
+        /// </summary>
+        internal static string species_list_sphingidae {
+            get {
+                return ResourceManager.GetString("species_list_sphingidae", resourceCulture);
+            }
+        }
     }
 }

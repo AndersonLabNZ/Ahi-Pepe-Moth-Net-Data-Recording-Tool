@@ -121,9 +121,6 @@
   <data name="alt_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-nz\alt_light.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="aspect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\aspect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
   <data name="canopy_height" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-nz\canopy_height.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -133,11 +130,185 @@
   <data name="distance_shrub_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-nz\distance_shrub_tree.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="months" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\months.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="EXCEPT_SET_ABUNDANCE_FILE" xml:space="preserve">
+    <value>Could not open the moth or rodent file. The file was not found.</value>
+  </data>
+  <data name="EXCEPT_SET_ABUND_COLUMN" xml:space="preserve">
+    <value>Expected {0} columns for the abundance data - but there was / were only {1} column(s) at line {2}</value>
+    <comment>{0}: The amount of columns there should be, {1}: The amount of columns there were, {2}: The line the error occured at</comment>
+  </data>
+  <data name="EXCEPT_SET_FILE_NOT_FOUND" xml:space="preserve">
+    <value>The settings file or name file was not found </value>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_ABUNDANCE_NOT_INT" xml:space="preserve">
+    <value>Expected an integer for the abundance data, got "{0}" instead</value>
+    <comment>{0}: The non integer value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_ALT_LIGHT" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the light sources near the trap at night.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_CLOUD" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for cloud during the night.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_DATE_FORMAT" xml:space="preserve">
+    <value>The night date was not in the correct date format</value>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_MOON_PHASE" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the moon phase during the night.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_PRECIP" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the precipitation during the night.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_SUNRISE_NOT_INT" xml:space="preserve">
+    <value>Expected an integer for the sunrise time, got "{0}" instead</value>
+    <comment>{0}: The non integer value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_SUNSET_NOT_INT" xml:space="preserve">
+    <value>Expected an integer for the sunset time, got "{0}" instead</value>
+    <comment>{0}: The non integer value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_NIGHT_WIND_DIR" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for wind direction during the night.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_NOT_ON_LIST" xml:space="preserve">
+    <value>The settings item "{0}" is not a valid settings item for the data. Expected "{1}".</value>
+    <comment>{0}: The settings header, {1}: The expected header</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_CANOPY_HEIGHT" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the canopy height around the trap.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_DISTRICT" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the site district.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_PRED_REMOVE" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the site predator removal regieme.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_REGION" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the site region.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_SHRUB_DIST" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for distance between the trap and the nearest shrub.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_SLOPE_ASPECT" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the site slope aspect.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_SURROUNDING_VEG" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the vegetation surrounding the trap.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_TYPE" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for site type.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_SITE_VEG_RES" xml:space="preserve">
+    <value>The settings value "{0}" is not a valid option for the site vegetation restoration regieme.</value>
+    <comment>{0}: The value in the settings file</comment>
+  </data>
+  <data name="EXCEPT_SET_TOO_FEW" xml:space="preserve">
+    <value>Too few items in the settings file - some data is missing.\nExpected {0} row(s), got {1} row(s) instead</value>
+    <comment>{0}: The expected amount of rows, {1}: The actual amount</comment>
   </data>
   <data name="moon_phase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-nz\moon_phase.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="MSG_TEXT_ADD_SP_NOT_LIST" xml:space="preserve">
+    <value>Do you want to add this species ({0}) to the abundance list despite not being recorded as present in the current region ({1})?</value>
+    <comment>{0}: Species to add, {1}: Selected region</comment>
+  </data>
+  <data name="MSG_TEXT_CHECK_DUP_NIGHT" xml:space="preserve">
+    <value>There are two nights for the night of "{0}".\nThere should be only one night added per actual night.\nPlease resolve this duplicate.</value>
+    <comment>{0}: The duplicated night</comment>
+  </data>
+  <data name="MSG_TEXT_CHECK_DUP_SP" xml:space="preserve">
+    <value>There is some duplicate abundance data.\nSave anyway?</value>
+  </data>
+  <data name="MSG_TEXT_CHECK_EXPORT" xml:space="preserve">
+    <value>Do you want to export the data?\nDo this once you have added all the data and are ready to send it back to the Ahi Pepe team.</value>
+  </data>
+  <data name="MSG_TEXT_CHECK_SP_NOT_LIST" xml:space="preserve">
+    <value>Some species including "{0}" have been added that have not been recorded as being present in the current region ({1}).\nSave anyway?</value>
+    <comment>{0}: The type of species, {0}: Example species, {1}: Selected region</comment>
+  </data>
+  <data name="MSG_TEXT_CONF_DELETE_NIGHT" xml:space="preserve">
+    <value>Are you sure you want to delete the night "{0}"?\nThis cannot be undone.</value>
+    <comment>{0}: The night to delete</comment>
+  </data>
+  <data name="MSG_TEXT_CREATE_NIGHT_FAIL" xml:space="preserve">
+    <value>Could not create night - {0}</value>
+    <comment>{0}: Exception</comment>
+  </data>
+  <data name="MSG_TEXT_CREATE_SITE_FAIL" xml:space="preserve">
+    <value>Could not create site  - {0}</value>
+    <comment>{0}: Exception</comment>
+  </data>
+  <data name="MSG_TEXT_EXPORT_FAIL" xml:space="preserve">
+    <value>Export failed. Windows error message:\n{0}</value>
+    <comment>{0}: Exception</comment>
+  </data>
+  <data name="MSG_TEXT_NO_SITES_CREATE_QUESTION" xml:space="preserve">
+    <value>There are no saved sites.\nWould you like to create one?</value>
+  </data>
+  <data name="MSG_TEXT_OPEN_NIGHT_FAIL" xml:space="preserve">
+    <value>Could not open night - {0}</value>
+    <comment>{0}: Exception</comment>
+  </data>
+  <data name="MSG_TEXT_OPEN_SITE_FAIL" xml:space="preserve">
+    <value>Could not open site - {0}</value>
+    <comment>{0}: Exception</comment>
+  </data>
+  <data name="MSG_TEXT_SP_LIST_UPDATE_REGION" xml:space="preserve">
+    <value>Updating the region may invalidate some moth abundance entrances, if they are found in the region "{0}", but not in region "{1}".\nThis is acceptable, however you will be warned when you go to save the data\nClick Yes to continue, or No to revert to the previous region ({0}).</value>
+    <comment>{0}: Previous region, {1}: Selected region</comment>
+  </data>
+  <data name="MSG_TITLE_ADD_SP_NOT_LIST" xml:space="preserve">
+    <value>Add Unrecorded Species?</value>
+  </data>
+  <data name="MSG_TITLE_CHECK_DUP_NIGHT" xml:space="preserve">
+    <value>Resolve Duplicated Night</value>
+  </data>
+  <data name="MSG_TITLE_CHECK_DUP_SP" xml:space="preserve">
+    <value>Continue With Duplicate Data?</value>
+  </data>
+  <data name="MSG_TITLE_CHECK_EXPORT" xml:space="preserve">
+    <value>Export Data?</value>
+  </data>
+  <data name="MSG_TITLE_CHECK_SP_NOT_LIST" xml:space="preserve">
+    <value>Continue With Unrecorded Species?</value>
+  </data>
+  <data name="MSG_TITLE_CONF_ACT" xml:space="preserve">
+    <value>Confirm Action</value>
+  </data>
+  <data name="MSG_TITLE_CREATE_NIGHT_FAIL" xml:space="preserve">
+    <value>Night Creation Error</value>
+  </data>
+  <data name="MSG_TITLE_CREATE_SITE_FAIL" xml:space="preserve">
+    <value>Site Creation Error</value>
+  </data>
+  <data name="MSG_TITLE_EXPORT_FAIL" xml:space="preserve">
+    <value>Export Failed</value>
+  </data>
+  <data name="MSG_TITLE_NO_SITES_CREATE_QUESTION" xml:space="preserve">
+    <value>Create New Site?</value>
+  </data>
+  <data name="MSG_TITLE_OPEN_NIGHT_FAIL" xml:space="preserve">
+    <value>Night Opening Error</value>
+  </data>
+  <data name="MSG_TITLE_OPEN_SITE_FAIL" xml:space="preserve">
+    <value>Site Opening Error</value>
+  </data>
+  <data name="MSG_TITLE_SP_LIST_UPDATE_REGION" xml:space="preserve">
+    <value>Change Region?</value>
   </data>
   <data name="precipitation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-nz\precipitation.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
@@ -145,41 +316,15 @@
   <data name="predator_removal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-nz\predator_removal.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="regions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\regions.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="setting_headers_night" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\setting_headers_night.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="setting_headers_site" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\setting_headers_site.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
   <data name="site_type" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-nz\site_type.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="species_list_erebidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\species_list_erebidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="STR_EXCEPT_INNER_EXCEPT" xml:space="preserve">
+    <value>{0} - Windows message: {1}</value>
+    <comment>{0}: The localised CannotLoadException message, {1}: The nonlocalised </comment>
   </data>
-  <data name="species_list_geometridae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\species_list_geometridae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="species_list_hepialidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\species_list_hepialidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="species_list_noctuidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\species_list_noctuidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="species_list_nolidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\species_list_nolidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="species_list_rodents" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\species_list_rodents.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="species_list_saturniidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\species_list_saturniidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="species_list_sphingidae" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\en-nz\species_list_sphingidae.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="STR_NAME_UNKNOWN" xml:space="preserve">
+    <value>Name unknown</value>
   </data>
   <data name="subregions_ngā_paihau" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\en-nz\subregions_ngā_paihau.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

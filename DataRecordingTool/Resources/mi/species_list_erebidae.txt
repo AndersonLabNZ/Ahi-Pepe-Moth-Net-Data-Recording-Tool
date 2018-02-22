@@ -1,5 +1,0 @@
-﻿A,Dasypodia cymatodes
-A,Pantydia sparsa
-BCD,Trigonistis anticlina
-ABCDEFH,Rhapsa scotosialis 
-ABDEFH,Schrankia costaestrigalis 

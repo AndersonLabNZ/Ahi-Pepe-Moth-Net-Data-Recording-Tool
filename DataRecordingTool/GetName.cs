@@ -29,7 +29,7 @@ namespace MothNet
             //If there are no folders i.e. no sites, then the user will be prompted to create one
             if (folders.Count() == 0)
             {
-                if (MessageBox.Show("There are currently no sites. Would you like to create one?", "No Sites", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_NO_SITES_CREATE_QUESTION"), HelperFunctions.FormatResStr("MSG_TITLE_NO_SITES_CREATE_QUESTION"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //Create site, and run through the dialogs. Continues to the DialogResult set as we don't want this form to be shown
                     try
@@ -38,7 +38,7 @@ namespace MothNet
                     }
                     catch (CannotLoadException except)
                     {
-                        MessageBox.Show(HelperFunctions.GetExceptionUserMessage(except), "Cannot Create Site", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_CREATE_SITE_FAIL", HelperFunctions.GetExceptionUserMessage(except)), HelperFunctions.FormatResStr("MSG_TITLE_CREATE_SITE_FAIL"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
@@ -79,7 +79,7 @@ namespace MothNet
             }
             catch (CannotLoadException except)
             {
-                MessageBox.Show(HelperFunctions.GetExceptionUserMessage(except), "Cannot Open Site", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(HelperFunctions.FormatResStr("MSG_TEXT_OPEN_SITE_FAIL", HelperFunctions.GetExceptionUserMessage(except)), HelperFunctions.FormatResStr("MSG_TITLE_OPEN_SITE_FAIL"), MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 //Set to abort to override form closing
                 DialogResult = DialogResult.Abort;
