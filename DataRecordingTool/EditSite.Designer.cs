@@ -75,45 +75,32 @@
             // 
             // buttonNight
             // 
-            this.buttonNight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonNight.Location = new System.Drawing.Point(427, 3);
+            resources.ApplyResources(this.buttonNight, "buttonNight");
             this.buttonNight.Name = "buttonNight";
-            this.buttonNight.Size = new System.Drawing.Size(114, 23);
-            this.buttonNight.TabIndex = 18;
-            this.buttonNight.Text = "Add Night Data >>";
-            this.buttonNight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonNight.UseVisualStyleBackColor = true;
             this.buttonNight.Click += new System.EventHandler(this.ButtonNightClick);
             // 
             // comboBoxShrubDistance
             // 
-            this.comboBoxShrubDistance.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxShrubDistance, "comboBoxShrubDistance");
             this.comboBoxShrubDistance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxShrubDistance.FormattingEnabled = true;
-            this.comboBoxShrubDistance.Location = new System.Drawing.Point(203, 419);
             this.comboBoxShrubDistance.Name = "comboBoxShrubDistance";
-            this.comboBoxShrubDistance.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxShrubDistance.TabIndex = 16;
             this.comboBoxShrubDistance.Tag = "DISTANCE_TO_NEAREST_SHRUB_M";
             this.comboBoxShrubDistance.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
             // 
             // comboBoxCanopyHeight
             // 
-            this.comboBoxCanopyHeight.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxCanopyHeight, "comboBoxCanopyHeight");
             this.comboBoxCanopyHeight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCanopyHeight.FormattingEnabled = true;
-            this.comboBoxCanopyHeight.Location = new System.Drawing.Point(203, 393);
             this.comboBoxCanopyHeight.Name = "comboBoxCanopyHeight";
-            this.comboBoxCanopyHeight.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxCanopyHeight.TabIndex = 15;
             this.comboBoxCanopyHeight.Tag = "HEIGHT_OF_SURROUNDING_VEG_M";
             this.comboBoxCanopyHeight.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
             // 
             // tableLayoutPanelData
             // 
-            this.tableLayoutPanelData.ColumnCount = 2;
-            this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            resources.ApplyResources(this.tableLayoutPanelData, "tableLayoutPanelData");
             this.tableLayoutPanelData.Controls.Add(this.textBoxSlope, 1, 12);
             this.tableLayoutPanelData.Controls.Add(this.textBoxAltitude, 1, 11);
             this.tableLayoutPanelData.Controls.Add(this.textBoxAccuracy, 1, 10);
@@ -148,439 +135,238 @@
             this.tableLayoutPanelData.Controls.Add(this.comboBoxShrubDistance, 1, 16);
             this.tableLayoutPanelData.Controls.Add(this.textBoxSchoolGroup, 1, 0);
             this.tableLayoutPanelData.Controls.Add(this.labelSchoolGroup, 0, 0);
-            this.tableLayoutPanelData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelData.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanelData.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelData.Name = "tableLayoutPanelData";
-            this.tableLayoutPanelData.RowCount = 17;
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelData.Size = new System.Drawing.Size(544, 442);
-            this.tableLayoutPanelData.TabIndex = 7;
             // 
             // textBoxSlope
             // 
-            this.textBoxSlope.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxSlope.Location = new System.Drawing.Point(203, 315);
+            resources.ApplyResources(this.textBoxSlope, "textBoxSlope");
             this.textBoxSlope.Name = "textBoxSlope";
-            this.textBoxSlope.Size = new System.Drawing.Size(338, 20);
-            this.textBoxSlope.TabIndex = 12;
             this.textBoxSlope.Tag = "SLOPE_DEG";
             this.textBoxSlope.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
             // textBoxAltitude
             // 
-            this.textBoxAltitude.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAltitude.Location = new System.Drawing.Point(203, 289);
+            resources.ApplyResources(this.textBoxAltitude, "textBoxAltitude");
             this.textBoxAltitude.Name = "textBoxAltitude";
-            this.textBoxAltitude.Size = new System.Drawing.Size(338, 20);
-            this.textBoxAltitude.TabIndex = 11;
             this.textBoxAltitude.Tag = "ALTITUDE_M";
             this.textBoxAltitude.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
             // textBoxAccuracy
             // 
-            this.textBoxAccuracy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAccuracy.Location = new System.Drawing.Point(203, 263);
+            resources.ApplyResources(this.textBoxAccuracy, "textBoxAccuracy");
             this.textBoxAccuracy.Name = "textBoxAccuracy";
-            this.textBoxAccuracy.Size = new System.Drawing.Size(338, 20);
-            this.textBoxAccuracy.TabIndex = 10;
             this.textBoxAccuracy.Tag = "ACCURACY_M";
             this.textBoxAccuracy.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
             // textBoxLongitude
             // 
-            this.textBoxLongitude.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxLongitude.Location = new System.Drawing.Point(203, 237);
+            resources.ApplyResources(this.textBoxLongitude, "textBoxLongitude");
             this.textBoxLongitude.Name = "textBoxLongitude";
-            this.textBoxLongitude.Size = new System.Drawing.Size(338, 20);
-            this.textBoxLongitude.TabIndex = 9;
             this.textBoxLongitude.Tag = "LONG_DECDEG";
             this.textBoxLongitude.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
             // textBoxLatitude
             // 
-            this.textBoxLatitude.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxLatitude.Location = new System.Drawing.Point(203, 211);
+            resources.ApplyResources(this.textBoxLatitude, "textBoxLatitude");
             this.textBoxLatitude.Name = "textBoxLatitude";
-            this.textBoxLatitude.Size = new System.Drawing.Size(338, 20);
-            this.textBoxLatitude.TabIndex = 8;
             this.textBoxLatitude.Tag = "LAT_DECDEG";
             this.textBoxLatitude.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
             // comboBoxPredatorRemoval
             // 
-            this.comboBoxPredatorRemoval.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxPredatorRemoval, "comboBoxPredatorRemoval");
             this.comboBoxPredatorRemoval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPredatorRemoval.FormattingEnabled = true;
-            this.comboBoxPredatorRemoval.Location = new System.Drawing.Point(203, 133);
             this.comboBoxPredatorRemoval.Name = "comboBoxPredatorRemoval";
-            this.comboBoxPredatorRemoval.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxPredatorRemoval.TabIndex = 5;
             this.comboBoxPredatorRemoval.Tag = "PREDATOR_REMOVAL_REGIME";
             // 
             // comboBoxVegetationRestoration
             // 
-            this.comboBoxVegetationRestoration.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxVegetationRestoration, "comboBoxVegetationRestoration");
             this.comboBoxVegetationRestoration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxVegetationRestoration.FormattingEnabled = true;
-            this.comboBoxVegetationRestoration.Location = new System.Drawing.Point(203, 107);
             this.comboBoxVegetationRestoration.Name = "comboBoxVegetationRestoration";
-            this.comboBoxVegetationRestoration.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxVegetationRestoration.TabIndex = 4;
             this.comboBoxVegetationRestoration.Tag = "VEG_RES_REGIME";
             // 
             // labelPredatorRemove
             // 
-            this.labelPredatorRemove.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPredatorRemove.Location = new System.Drawing.Point(3, 133);
-            this.labelPredatorRemove.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelPredatorRemove, "labelPredatorRemove");
             this.labelPredatorRemove.Name = "labelPredatorRemove";
-            this.labelPredatorRemove.Size = new System.Drawing.Size(194, 20);
-            this.labelPredatorRemove.TabIndex = 34;
-            this.labelPredatorRemove.Text = "Predator Removal Regime";
-            this.labelPredatorRemove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelVegetationRestore
             // 
-            this.labelVegetationRestore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelVegetationRestore.Location = new System.Drawing.Point(3, 107);
-            this.labelVegetationRestore.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelVegetationRestore, "labelVegetationRestore");
             this.labelVegetationRestore.Name = "labelVegetationRestore";
-            this.labelVegetationRestore.Size = new System.Drawing.Size(194, 20);
-            this.labelVegetationRestore.TabIndex = 33;
-            this.labelVegetationRestore.Text = "Vegetation Restoration Regime";
-            this.labelVegetationRestore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelAccuracy
             // 
-            this.labelAccuracy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAccuracy.Location = new System.Drawing.Point(3, 263);
-            this.labelAccuracy.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelAccuracy, "labelAccuracy");
             this.labelAccuracy.Name = "labelAccuracy";
-            this.labelAccuracy.Size = new System.Drawing.Size(194, 20);
-            this.labelAccuracy.TabIndex = 32;
-            this.labelAccuracy.Text = "Accuracy (m)";
-            this.labelAccuracy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboBoxSubRegions
             // 
-            this.comboBoxSubRegions.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxSubRegions, "comboBoxSubRegions");
             this.comboBoxSubRegions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSubRegions.FormattingEnabled = true;
-            this.comboBoxSubRegions.Location = new System.Drawing.Point(203, 185);
             this.comboBoxSubRegions.Name = "comboBoxSubRegions";
-            this.comboBoxSubRegions.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxSubRegions.TabIndex = 7;
             this.comboBoxSubRegions.Tag = "SUB_REGION";
             // 
             // comboBoxRegions
             // 
-            this.comboBoxRegions.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxRegions, "comboBoxRegions");
             this.comboBoxRegions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRegions.FormattingEnabled = true;
-            this.comboBoxRegions.Location = new System.Drawing.Point(203, 159);
             this.comboBoxRegions.Name = "comboBoxRegions";
-            this.comboBoxRegions.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxRegions.TabIndex = 6;
             this.comboBoxRegions.Tag = "REGION";
             this.comboBoxRegions.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
             // 
             // comboBoxAspect
             // 
-            this.comboBoxAspect.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxAspect, "comboBoxAspect");
             this.comboBoxAspect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAspect.FormattingEnabled = true;
-            this.comboBoxAspect.Location = new System.Drawing.Point(203, 341);
             this.comboBoxAspect.Name = "comboBoxAspect";
-            this.comboBoxAspect.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxAspect.TabIndex = 13;
             this.comboBoxAspect.Tag = "ASPECT";
             this.comboBoxAspect.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
             // 
             // labelShrub
             // 
-            this.labelShrub.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelShrub.Location = new System.Drawing.Point(3, 419);
-            this.labelShrub.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelShrub, "labelShrub");
             this.labelShrub.Name = "labelShrub";
-            this.labelShrub.Size = new System.Drawing.Size(194, 20);
-            this.labelShrub.TabIndex = 27;
-            this.labelShrub.Text = "Distance to nearest shrub / tree (m)";
-            this.labelShrub.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelVegetation
             // 
-            this.labelVegetation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelVegetation.Location = new System.Drawing.Point(3, 367);
-            this.labelVegetation.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelVegetation, "labelVegetation");
             this.labelVegetation.Name = "labelVegetation";
-            this.labelVegetation.Size = new System.Drawing.Size(194, 20);
-            this.labelVegetation.TabIndex = 26;
-            this.labelVegetation.Text = "Surrounding vegetation";
-            this.labelVegetation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelCanopy
             // 
-            this.labelCanopy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCanopy.Location = new System.Drawing.Point(3, 393);
-            this.labelCanopy.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelCanopy, "labelCanopy");
             this.labelCanopy.Name = "labelCanopy";
-            this.labelCanopy.Size = new System.Drawing.Size(194, 20);
-            this.labelCanopy.TabIndex = 25;
-            this.labelCanopy.Text = "Height of surrounding canopy (m)";
-            this.labelCanopy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelAspect
             // 
-            this.labelAspect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAspect.Location = new System.Drawing.Point(3, 341);
-            this.labelAspect.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelAspect, "labelAspect");
             this.labelAspect.Name = "labelAspect";
-            this.labelAspect.Size = new System.Drawing.Size(194, 20);
-            this.labelAspect.TabIndex = 24;
-            this.labelAspect.Text = "Aspect";
-            this.labelAspect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelSlope
             // 
-            this.labelSlope.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelSlope.Location = new System.Drawing.Point(3, 315);
-            this.labelSlope.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelSlope, "labelSlope");
             this.labelSlope.Name = "labelSlope";
-            this.labelSlope.Size = new System.Drawing.Size(194, 20);
-            this.labelSlope.TabIndex = 23;
-            this.labelSlope.Text = "Slope (degrees)";
-            this.labelSlope.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelLong
             // 
-            this.labelLong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelLong.Location = new System.Drawing.Point(3, 237);
-            this.labelLong.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelLong, "labelLong");
             this.labelLong.Name = "labelLong";
-            this.labelLong.Size = new System.Drawing.Size(194, 20);
-            this.labelLong.TabIndex = 22;
             this.labelLong.Tag = "";
-            this.labelLong.Text = "Longitude (decimal degres)";
-            this.labelLong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelLat
             // 
-            this.labelLat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelLat.Location = new System.Drawing.Point(3, 211);
-            this.labelLat.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelLat, "labelLat");
             this.labelLat.Name = "labelLat";
-            this.labelLat.Size = new System.Drawing.Size(194, 20);
-            this.labelLat.TabIndex = 21;
-            this.labelLat.Text = "Latitude (decimal degrees)";
-            this.labelLat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelAltitude
             // 
-            this.labelAltitude.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAltitude.Location = new System.Drawing.Point(3, 289);
-            this.labelAltitude.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelAltitude, "labelAltitude");
             this.labelAltitude.Name = "labelAltitude";
-            this.labelAltitude.Size = new System.Drawing.Size(194, 20);
-            this.labelAltitude.TabIndex = 20;
-            this.labelAltitude.Text = "Altitude (m)";
-            this.labelAltitude.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelSubregion
             // 
-            this.labelSubregion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelSubregion.Location = new System.Drawing.Point(3, 185);
-            this.labelSubregion.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelSubregion, "labelSubregion");
             this.labelSubregion.Name = "labelSubregion";
-            this.labelSubregion.Size = new System.Drawing.Size(194, 20);
-            this.labelSubregion.TabIndex = 19;
-            this.labelSubregion.Text = "Crosby District";
-            this.labelSubregion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxLocation
             // 
-            this.textBoxLocation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxLocation.Location = new System.Drawing.Point(203, 29);
+            resources.ApplyResources(this.textBoxLocation, "textBoxLocation");
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(338, 20);
-            this.textBoxLocation.TabIndex = 1;
             this.textBoxLocation.Tag = "LOCATION";
             this.textBoxLocation.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
             // textBoxSiteName
             // 
-            this.textBoxSiteName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxSiteName.Location = new System.Drawing.Point(203, 81);
+            resources.ApplyResources(this.textBoxSiteName, "textBoxSiteName");
             this.textBoxSiteName.Name = "textBoxSiteName";
             this.textBoxSiteName.ReadOnly = true;
-            this.textBoxSiteName.Size = new System.Drawing.Size(338, 20);
-            this.textBoxSiteName.TabIndex = 3;
             this.textBoxSiteName.Tag = "SITE_NAME";
             this.textBoxSiteName.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
             // comboBoxSurroundingVegetation
             // 
-            this.comboBoxSurroundingVegetation.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxSurroundingVegetation, "comboBoxSurroundingVegetation");
             this.comboBoxSurroundingVegetation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSurroundingVegetation.FormattingEnabled = true;
-            this.comboBoxSurroundingVegetation.Location = new System.Drawing.Point(203, 367);
             this.comboBoxSurroundingVegetation.Name = "comboBoxSurroundingVegetation";
-            this.comboBoxSurroundingVegetation.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxSurroundingVegetation.TabIndex = 14;
             this.comboBoxSurroundingVegetation.Tag = "SURROUNDING_VEG";
             this.comboBoxSurroundingVegetation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
             // 
             // labelRegion
             // 
-            this.labelRegion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRegion.Location = new System.Drawing.Point(3, 159);
-            this.labelRegion.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelRegion, "labelRegion");
             this.labelRegion.Name = "labelRegion";
-            this.labelRegion.Size = new System.Drawing.Size(194, 20);
-            this.labelRegion.TabIndex = 16;
-            this.labelRegion.Text = "Region";
-            this.labelRegion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelSiteType
             // 
-            this.labelSiteType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelSiteType.Location = new System.Drawing.Point(3, 55);
-            this.labelSiteType.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelSiteType, "labelSiteType");
             this.labelSiteType.Name = "labelSiteType";
-            this.labelSiteType.Size = new System.Drawing.Size(194, 20);
-            this.labelSiteType.TabIndex = 15;
-            this.labelSiteType.Text = "Site Type";
-            this.labelSiteType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelSiteName
             // 
-            this.labelSiteName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelSiteName.Location = new System.Drawing.Point(3, 81);
-            this.labelSiteName.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelSiteName, "labelSiteName");
             this.labelSiteName.Name = "labelSiteName";
-            this.labelSiteName.Size = new System.Drawing.Size(194, 20);
-            this.labelSiteName.TabIndex = 14;
-            this.labelSiteName.Text = "Site Name";
-            this.labelSiteName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelLocation
             // 
-            this.labelLocation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelLocation.Location = new System.Drawing.Point(3, 29);
-            this.labelLocation.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelLocation, "labelLocation");
             this.labelLocation.Name = "labelLocation";
-            this.labelLocation.Size = new System.Drawing.Size(194, 20);
-            this.labelLocation.TabIndex = 14;
-            this.labelLocation.Text = "Location";
-            this.labelLocation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboBoxSiteType
             // 
-            this.comboBoxSiteType.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.comboBoxSiteType, "comboBoxSiteType");
             this.comboBoxSiteType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSiteType.FormattingEnabled = true;
-            this.comboBoxSiteType.Location = new System.Drawing.Point(203, 55);
             this.comboBoxSiteType.Name = "comboBoxSiteType";
-            this.comboBoxSiteType.Size = new System.Drawing.Size(338, 21);
-            this.comboBoxSiteType.TabIndex = 2;
             this.comboBoxSiteType.Tag = "SITE_TYPE";
             this.comboBoxSiteType.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSelectionChangeIndex);
             // 
             // textBoxSchoolGroup
             // 
-            this.textBoxSchoolGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxSchoolGroup.Location = new System.Drawing.Point(203, 3);
+            resources.ApplyResources(this.textBoxSchoolGroup, "textBoxSchoolGroup");
             this.textBoxSchoolGroup.Name = "textBoxSchoolGroup";
-            this.textBoxSchoolGroup.Size = new System.Drawing.Size(338, 20);
-            this.textBoxSchoolGroup.TabIndex = 0;
             this.textBoxSchoolGroup.Tag = "SCHOOL_GROUP";
             this.textBoxSchoolGroup.TextChanged += new System.EventHandler(this.TextBoxesTextChanged);
             // 
             // labelSchoolGroup
             // 
-            this.labelSchoolGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelSchoolGroup.Location = new System.Drawing.Point(3, 3);
-            this.labelSchoolGroup.Margin = new System.Windows.Forms.Padding(3);
+            resources.ApplyResources(this.labelSchoolGroup, "labelSchoolGroup");
             this.labelSchoolGroup.Name = "labelSchoolGroup";
-            this.labelSchoolGroup.Size = new System.Drawing.Size(194, 20);
-            this.labelSchoolGroup.TabIndex = 13;
-            this.labelSchoolGroup.Text = "School Group";
-            this.labelSchoolGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanelData, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanelButtons, 0, 2);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 442F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(544, 470);
-            this.tableLayoutPanel2.TabIndex = 8;
             // 
             // tableLayoutPanelButtons
             // 
-            this.tableLayoutPanelButtons.ColumnCount = 3;
-            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            resources.ApplyResources(this.tableLayoutPanelButtons, "tableLayoutPanelButtons");
             this.tableLayoutPanelButtons.Controls.Add(this.buttonSaveSite, 0, 0);
             this.tableLayoutPanelButtons.Controls.Add(this.buttonNight, 2, 0);
-            this.tableLayoutPanelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelButtons.Location = new System.Drawing.Point(0, 441);
-            this.tableLayoutPanelButtons.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelButtons.Name = "tableLayoutPanelButtons";
-            this.tableLayoutPanelButtons.RowCount = 1;
-            this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelButtons.Size = new System.Drawing.Size(544, 29);
-            this.tableLayoutPanelButtons.TabIndex = 18;
             // 
             // buttonSaveSite
             // 
-            this.buttonSaveSite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSaveSite.Location = new System.Drawing.Point(3, 3);
+            resources.ApplyResources(this.buttonSaveSite, "buttonSaveSite");
             this.buttonSaveSite.Name = "buttonSaveSite";
-            this.buttonSaveSite.Size = new System.Drawing.Size(114, 23);
-            this.buttonSaveSite.TabIndex = 17;
-            this.buttonSaveSite.Text = "<< Save and Exit";
-            this.buttonSaveSite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSaveSite.UseVisualStyleBackColor = true;
             this.buttonSaveSite.Click += new System.EventHandler(this.ButtonSaveClick);
             // 
             // EditSite
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 470);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(560, 509);
             this.Name = "EditSite";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Site Data";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HandleFormClosing);
             this.tableLayoutPanelData.ResumeLayout(false);
             this.tableLayoutPanelData.PerformLayout();

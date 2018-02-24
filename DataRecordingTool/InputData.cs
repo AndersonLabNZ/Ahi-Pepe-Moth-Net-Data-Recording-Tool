@@ -100,17 +100,23 @@ namespace MothNet
 
         private char prevRegion;
 
+        public enum SpeciesType
+        {
+            Moths,
+            Rodents
+        }
+
         /// <summary>
         /// Loads the list of moths that are expected in the specified region
         /// </summary>
         /// <param name="region">The character representing the region the moths are expected in, e.g. A, B, C etc. An asterisk '*' is used to match any region</param>
         /// <param name="name"></param>
         /// <returns></returns>
-        public string[] GetSpeciesList(char region, string name)
+        public string[] GetSpeciesList(char region, SpeciesType type)
         {
-            switch (name)
+            switch (type)
             {
-                case "Moths":
+                case SpeciesType.Moths:
                 {
                     //Create the list which will hold the species
                     List<String> returnList = new List<String>();
@@ -125,7 +131,7 @@ namespace MothNet
                     }
                     return returnList.ToArray();
                 }
-                case "Rodents":
+                case SpeciesType.Rodents:
                 {
                     //List have to load the rodent list. Small file so can just load each time
                     return HelperFunctions.GetResourceList("species_list_rodents");
@@ -148,11 +154,11 @@ namespace MothNet
             //Choose whether to update to moths or rodents
             if (radioButtonMoths.Checked)
             {
-                comboBoxSpecies.Items.AddRange(GetSpeciesList(region, "Moths"));
+                comboBoxSpecies.Items.AddRange(GetSpeciesList(region, SpeciesType.Moths));
             }
             else
             {
-                comboBoxSpecies.Items.AddRange(GetSpeciesList(region, "Rodents"));
+                comboBoxSpecies.Items.AddRange(GetSpeciesList(region, SpeciesType.Rodents));
             }
 
             //Reset the prevRegion field to the current region
@@ -239,13 +245,13 @@ namespace MothNet
             if (radioButtonMoths.Checked)
             {
                 //If moths are checked then add the moths to the list view
-                listViewMoths.Columns[1].Text = "Voucher Number";
+                listViewMoths.Columns[1].Text = HelperFunctions.FormatResStr("STR_VOUCHER_NUMBER");
                 listViewMoths.Items.AddRange(Moths.Items);
             }
             else if (radioButtonRodents.Checked)
             {
                 //If rodents are checked then add the rodents to lhe list view
-                listViewMoths.Columns[1].Text = "Tracking Tunnel Number";
+                listViewMoths.Columns[1].Text = HelperFunctions.FormatResStr("STR_TT_NUMBER");
                 listViewMoths.Items.AddRange(Rodents.Items);
             }
 
@@ -269,7 +275,7 @@ namespace MothNet
         public void SaveAbundances()
         {
             //If both save without the user cancelling, then hide the form
-            if (Moths.Save(GetSpeciesList(prevRegion, "Moths"), HelperFunctions.GetRegionFromID(prevRegion)) && Rodents.Save(GetSpeciesList(prevRegion, "Rodents"), HelperFunctions.GetRegionFromID(prevRegion)))
+            if (Moths.Save(GetSpeciesList(prevRegion, SpeciesType.Moths), HelperFunctions.GetRegionFromID(prevRegion)) && Rodents.Save(GetSpeciesList(prevRegion, SpeciesType.Rodents), HelperFunctions.GetRegionFromID(prevRegion)))
             {
                 //Yes means saving and closing
                 this.DialogResult = DialogResult.Yes;

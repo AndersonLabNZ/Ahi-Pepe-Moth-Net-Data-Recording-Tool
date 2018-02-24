@@ -135,17 +135,32 @@
     <Compile Include="StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditSite.en-NZ.resx">
+      <DependentUpon>EditSite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditSite.resx">
       <DependentUpon>EditSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetName.en-NZ.resx">
+      <DependentUpon>GetName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GetName.resx">
       <DependentUpon>GetName.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InputData.en-NZ.resx">
+      <DependentUpon>InputData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputData.resx">
       <DependentUpon>InputData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NightEdit.en-NZ.resx">
+      <DependentUpon>NightEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NightEdit.resx">
       <DependentUpon>NightEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NightForm.en-NZ.resx">
+      <DependentUpon>NightForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NightForm.resx">
       <DependentUpon>NightForm.cs</DependentUpon>

@@ -332,10 +332,10 @@ namespace MothNet
                     }
 
                     //Set the back colour to red if there is no file. This will be reset to grey/white if one is not needed
-                    buttonIbutonSelect.BackColor = IButtonFile.IsAvailable ? Color.FromArgb(225, 225, 225) : Color.Tomato;
+                    buttonIButonSelect.BackColor = IButtonFile.IsAvailable ? Color.FromArgb(225, 225, 225) : Color.Tomato;
 
                     //Set the check state
-                    checkBoxIbuttonFileAvailable.Checked = IButtonFile.IsAvailable;
+                    checkBoxIButtonFileAvailable.Checked = IButtonFile.IsAvailable;
                     break;
                 case 12:
                     //If the kestral file data is available, then set the checked value to true, and start loading
@@ -495,7 +495,7 @@ namespace MothNet
 
             //Environmental data
             sb.AppendLine(list[10] + "," + HelperFunctions.GetEnableString(checkBoxKestFileAvailable, textBoxKestrelSerial));
-            sb.AppendLine(list[11] + "," + HelperFunctions.GetEnableString(checkBoxIbuttonFileAvailable, textBoxIButtonSerial));
+            sb.AppendLine(list[11] + "," + HelperFunctions.GetEnableString(checkBoxIButtonFileAvailable, textBoxIButtonSerial));
             sb.AppendLine(list[12] + "," + HelperFunctions.GetEnableString(checkBoxKestrelAvailable, textBoxAirAvg));
             sb.AppendLine(list[13] + "," + HelperFunctions.GetEnableString(checkBoxKestrelAvailable, textBoxAirMin));
             sb.AppendLine(list[14] + "," + HelperFunctions.GetEnableString(checkBoxKestrelAvailable, textBoxAirMax));
@@ -658,10 +658,10 @@ namespace MothNet
                 buttonSelectKestrelFile.BackColor = Color.FromArgb(204, 204, 204);
                 textBoxKestrelSerial.BackColor = Color.FromArgb(240, 240, 240);
             }
-            if (checkBoxIbuttonFileAvailable.Checked)
+            if (checkBoxIButtonFileAvailable.Checked)
             {
                 //If available set coulour to ok
-                buttonIbutonSelect.BackColor = IButtonFile.IsAvailable ? Color.FromArgb(225, 225, 225) : Color.Tomato;
+                buttonIButonSelect.BackColor = IButtonFile.IsAvailable ? Color.FromArgb(225, 225, 225) : Color.Tomato;
                 if (!(HelperFunctions.TextBoxHelper(textBoxIButtonSerial) && IButtonFile.IsAvailable))
                 {
                     ok = false;
@@ -670,12 +670,12 @@ namespace MothNet
             else
             {
                 //If this is not set as available, then set to the disabled colour
-                buttonIbutonSelect.BackColor = Color.FromArgb(204, 204, 204);
+                buttonIButonSelect.BackColor = Color.FromArgb(204, 204, 204);
                 textBoxIButtonSerial.BackColor = Color.FromArgb(240, 240, 240);
             }
 
             //All data may be ok but at least one form of environmental data must be selected 
-            buttonSave.Enabled = ok && (checkBoxKestrelAvailable.Checked || checkBoxKestFileAvailable.Checked || checkBoxIbuttonFileAvailable.Checked);
+            buttonSave.Enabled = ok && (checkBoxKestrelAvailable.Checked || checkBoxKestFileAvailable.Checked || checkBoxIButtonFileAvailable.Checked);
             buttonSpecies.Enabled = buttonSave.Enabled;
             return buttonSave.Enabled;
         }
@@ -690,8 +690,8 @@ namespace MothNet
             textBoxKestrelSerial.Enabled = checkBoxKestFileAvailable.Checked;
 
             //iButton
-            buttonIbutonSelect.Enabled = checkBoxIbuttonFileAvailable.Checked;
-            textBoxIButtonSerial.Enabled = checkBoxIbuttonFileAvailable.Checked;
+            buttonIButonSelect.Enabled = checkBoxIButtonFileAvailable.Checked;
+            textBoxIButtonSerial.Enabled = checkBoxIButtonFileAvailable.Checked;
 
             //Air temprature
             textBoxAirMin.Enabled = checkBoxKestrelAvailable.Checked;
